@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "병용금기 2약제",
+    "name": "병용금기 - 이트라코나졸 + 심바스타틴",
     "ingredients": ["이트라코나졸", "심바스타틴"],
     "expected": [
       { "type": "CONTRAINDICATED", "involvedIngredients": ["이트라코나졸", "심바스타틴"] }
@@ -9,33 +9,330 @@
   },
   {
     "id": 2,
-    "name": "다약제 5개",
-    "ingredients": ["아스피린", "와파린", "메트포르민", "디아제팜", "이부프로펜"],
+    "name": "병용금기 - 메트포르민 + 이오딕사놀",
+    "ingredients": ["메트포르민", "이오딕사놀"],
     "expected": [
-      { "type": "CONTRAINDICATED", "involvedIngredients": ["아스피린", "와파린"] },
-      { "type": "ELDERLY", "involvedIngredients": ["디아제팜"] },
-      { "type": "ELDERLY", "involvedIngredients": ["이부프로펜"] },
-      { "type": "DUPLICATE", "involvedIngredients": ["아스피린", "이부프로펜"] }
+      { "type": "CONTRAINDICATED", "involvedIngredients": ["메트포르민", "이오딕사놀"] }
     ]
   },
   {
     "id": 3,
-    "name": "안전한 조합 (False Positive 테스트)",
-    "ingredients": ["비타민C", "오메가3"],
-    "expected": []
+    "name": "병용금기 - 메트포르민 + 이오트로란",
+    "ingredients": ["메트포르민", "이오트로란"],
+    "expected": [
+      { "type": "CONTRAINDICATED", "involvedIngredients": ["메트포르민", "이오트로란"] }
+    ]
   },
   {
     "id": 4,
-    "name": "노인주의",
-    "ingredients": ["클로르디아제폭시드"],
+    "name": "병용금기 - 메토트렉세이트 + 티아프로펜산",
+    "ingredients": ["메토트렉세이트", "티아프로펜산"],
     "expected": [
-      { "type": "ELDERLY", "involvedIngredients": ["클로르디아제폭시드"] },
-      { "type": "PREGNANCY", "involvedIngredients": ["클로르디아제폭시드"] }
+      { "type": "CONTRAINDICATED", "involvedIngredients": ["메토트렉세이트", "티아프로펜산"] }
     ]
   },
   {
     "id": 5,
-    "name": "효능군중복",
+    "name": "병용금기 - 포르모테롤 + 노르에피네프린",
+    "ingredients": ["포르모테롤", "노르에피네프린"],
+    "expected": [
+      { "type": "CONTRAINDICATED", "involvedIngredients": ["포르모테롤", "노르에피네프린"] }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "병용금기 - 포르모테롤 + 에피네프린",
+    "ingredients": ["포르모테롤", "에피네프린"],
+    "expected": [
+      { "type": "CONTRAINDICATED", "involvedIngredients": ["포르모테롤", "에피네프린"] }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "병용금기 - 덱사메타손 + 스파플록사신",
+    "ingredients": ["덱사메타손", "스파플록사신"],
+    "expected": [
+      { "type": "CONTRAINDICATED", "involvedIngredients": ["덱사메타손", "스파플록사신"] }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "병용금기 - 히드로코르티손 + 스파플록사신",
+    "ingredients": ["히드로코르티손", "스파플록사신"],
+    "expected": [
+      { "type": "CONTRAINDICATED", "involvedIngredients": ["히드로코르티손", "스파플록사신"] }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "병용금기 - 프레드니솔론 + 스파플록사신",
+    "ingredients": ["프레드니솔론", "스파플록사신"],
+    "expected": [
+      { "type": "CONTRAINDICATED", "involvedIngredients": ["프레드니솔론", "스파플록사신"] }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "병용금기 - 헥소프레날린 + 노르에피네프린",
+    "ingredients": ["헥소프레날린", "노르에피네프린"],
+    "expected": [
+      { "type": "CONTRAINDICATED", "involvedIngredients": ["헥소프레날린", "노르에피네프린"] }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "노인주의 - 플루라제팜",
+    "ingredients": ["플루라제팜"],
+    "expected": [
+      { "type": "ELDERLY", "involvedIngredients": ["플루라제팜"] }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "노인주의 - 디아제팜",
+    "ingredients": ["디아제팜"],
+    "expected": [
+      { "type": "ELDERLY", "involvedIngredients": ["디아제팜"] }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "노인주의 - 클로르디아제폭시드",
+    "ingredients": ["클로르디아제폭시드"],
+    "expected": [
+      { "type": "ELDERLY", "involvedIngredients": ["클로르디아제폭시드"] }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "노인주의 - 클로나제팜",
+    "ingredients": ["클로나제팜"],
+    "expected": [
+      { "type": "ELDERLY", "involvedIngredients": ["클로나제팜"] }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "노인주의 - 몰린돈",
+    "ingredients": ["몰린돈"],
+    "expected": [
+      { "type": "ELDERLY", "involvedIngredients": ["몰린돈"] }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "노인주의 - 플루니트라제팜",
+    "ingredients": ["플루니트라제팜"],
+    "expected": [
+      { "type": "ELDERLY", "involvedIngredients": ["플루니트라제팜"] }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "노인주의 - 클로바잠",
+    "ingredients": ["클로바잠"],
+    "expected": [
+      { "type": "ELDERLY", "involvedIngredients": ["클로바잠"] }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "노인주의 - 멕사졸람",
+    "ingredients": ["멕사졸람"],
+    "expected": [
+      { "type": "ELDERLY", "involvedIngredients": ["멕사졸람"] }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "효능군중복 - 아스피린 + 이부프로펜 (소염제)",
+    "ingredients": ["아스피린", "이부프로펜"],
+    "expected": [
+      { "type": "DUPLICATE", "involvedIngredients": ["아스피린", "이부프로펜"] }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "효능군중복 - 아세클로페낙 + 나프록센 (소염제)",
+    "ingredients": ["아세클로페낙", "나프록센"],
+    "expected": [
+      { "type": "DUPLICATE", "involvedIngredients": ["아세클로페낙", "나프록센"] }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "효능군중복 - 세레콕시브 + 디클로페낙 (소염제)",
+    "ingredients": ["세레콕시브", "디클로페낙"],
+    "expected": [
+      { "type": "DUPLICATE", "involvedIngredients": ["세레콕시브", "디클로페낙"] }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "효능군중복 - 포르모테롤 + 살부타몰 (베타수용체)",
+    "ingredients": ["포르모테롤", "살부타몰"],
+    "expected": [
+      { "type": "DUPLICATE", "involvedIngredients": ["포르모테롤", "살부타몰"] }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "효능군중복 - 팔리페리돈 + 리스페리돈 (항정신병)",
+    "ingredients": ["팔리페리돈", "리스페리돈"],
+    "expected": [
+      { "type": "DUPLICATE", "involvedIngredients": ["팔리페리돈", "리스페리돈"] }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "효능군중복 - 쿠에티아핀 + 올란자핀 (항정신병)",
+    "ingredients": ["쿠에티아핀", "올란자핀"],
+    "expected": [
+      { "type": "DUPLICATE", "involvedIngredients": ["쿠에티아핀", "올란자핀"] }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "효능군중복 - 글리메피리드 + 글리클라지드 (설포닐우레아)",
+    "ingredients": ["글리메피리드", "글리클라지드"],
+    "expected": [
+      { "type": "DUPLICATE", "involvedIngredients": ["글리메피리드", "글리클라지드"] }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "효능군중복 - 베라파밀 + 딜티아젬 (CCB)",
+    "ingredients": ["베라파밀", "딜티아젬"],
+    "expected": [
+      { "type": "DUPLICATE", "involvedIngredients": ["베라파밀", "딜티아젬"] }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "임부금기 1등급 - 로수바스타틴",
+    "ingredients": ["로수바스타틴"],
+    "expected": [
+      { "type": "PREGNANCY", "involvedIngredients": ["로수바스타틴"] }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "임부금기 1등급 - 프라바스타틴",
+    "ingredients": ["프라바스타틴"],
+    "expected": [
+      { "type": "PREGNANCY", "involvedIngredients": ["프라바스타틴"] }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "임부금기 1등급 - 플루바스타틴",
+    "ingredients": ["플루바스타틴"],
+    "expected": [
+      { "type": "PREGNANCY", "involvedIngredients": ["플루바스타틴"] }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "임부금기 1등급 - 피타바스타틴",
+    "ingredients": ["피타바스타틴"],
+    "expected": [
+      { "type": "PREGNANCY", "involvedIngredients": ["피타바스타틴"] }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "임부금기 1등급 - 플루오로우라실",
+    "ingredients": ["플루오로우라실"],
+    "expected": [
+      { "type": "PREGNANCY", "involvedIngredients": ["플루오로우라실"] }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "임부금기 1등급 - 에티닐에스트라디올",
+    "ingredients": ["에티닐에스트라디올"],
+    "expected": [
+      { "type": "PREGNANCY", "involvedIngredients": ["에티닐에스트라디올"] }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "투여기간주의 - 나프록센 초과",
+    "ingredients": ["나프록센"],
+    "totalDays": 5,
+    "expected": [
+      { "type": "DURATION", "involvedIngredients": ["나프록센"] }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "투여기간주의 - 졸피뎀 초과",
+    "ingredients": ["졸피뎀타르타르산염"],
+    "totalDays": 35,
+    "expected": [
+      { "type": "DURATION", "involvedIngredients": ["졸피뎀타르타르산염"] }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "투여기간주의 - 트리아졸람 초과",
+    "ingredients": ["트리아졸람"],
+    "totalDays": 30,
+    "expected": [
+      { "type": "DURATION", "involvedIngredients": ["트리아졸람"] }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "투여기간주의 - 리네졸리드 초과",
+    "ingredients": ["리네졸리드"],
+    "totalDays": 35,
+    "expected": [
+      { "type": "DURATION", "involvedIngredients": ["리네졸리드"] }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "투여기간주의 - 클로르페니라민 초과",
+    "ingredients": ["클로르페니라민"],
+    "totalDays": 10,
+    "expected": [
+      { "type": "DURATION", "involvedIngredients": ["클로르페니라민"] }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "투여기간주의 - 옥시메타졸린 초과",
+    "ingredients": ["옥시메타졸린"],
+    "totalDays": 10,
+    "expected": [
+      { "type": "DURATION", "involvedIngredients": ["옥시메타졸린"] }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "안전한 조합 - 비타민C + 오메가3",
+    "ingredients": ["비타민C", "오메가3"],
+    "expected": []
+  },
+  {
+    "id": 40,
+    "name": "안전한 조합 - 단일 성분 (아세트아미노펜)",
+    "ingredients": ["아세트아미노펜"],
+    "expected": []
+  },
+  {
+    "id": 41,
+    "name": "복합 - 병용금기 + 노인주의",
+    "ingredients": ["디아제팜", "플루라제팜"],
+    "expected": [
+      { "type": "ELDERLY", "involvedIngredients": ["디아제팜"] },
+      { "type": "ELDERLY", "involvedIngredients": ["플루라제팜"] }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "복합 - 효능군중복 + 노인주의",
     "ingredients": ["아세클로페낙", "이부프로펜"],
     "expected": [
       { "type": "DUPLICATE", "involvedIngredients": ["아세클로페낙", "이부프로펜"] },
@@ -44,11 +341,72 @@
     ]
   },
   {
-    "id": 6,
-    "name": "임부금기",
-    "ingredients": ["프로게스테론"],
+    "id": 43,
+    "name": "복합 - 병용금기 + 효능군중복",
+    "ingredients": ["메트포르민", "이오딕사놀", "이오트로란"],
     "expected": [
-      { "type": "PREGNANCY", "involvedIngredients": ["프로게스테론"] }
+      { "type": "CONTRAINDICATED", "involvedIngredients": ["메트포르민", "이오딕사놀"] },
+      { "type": "CONTRAINDICATED", "involvedIngredients": ["메트포르민", "이오트로란"] }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "복합 - 임부금기 + 병용금기",
+    "ingredients": ["이트라코나졸", "심바스타틴", "로수바스타틴"],
+    "expected": [
+      { "type": "CONTRAINDICATED", "involvedIngredients": ["이트라코나졸", "심바스타틴"] },
+      { "type": "PREGNANCY", "involvedIngredients": ["로수바스타틴"] }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "복합 - 다약제 (5개)",
+    "ingredients": ["아스피린", "이부프로펜", "디아제팜", "메트포르민", "이오딕사놀"],
+    "expected": [
+      { "type": "CONTRAINDICATED", "involvedIngredients": ["메트포르민", "이오딕사놀"] },
+      { "type": "DUPLICATE", "involvedIngredients": ["아스피린", "이부프로펜"] },
+      { "type": "ELDERLY", "involvedIngredients": ["디아제팜"] }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "투여기간주의 - 기간 안 넘은 경우 (정상)",
+    "ingredients": ["나프록센"],
+    "totalDays": 2,
+    "expected": []
+  },
+  {
+    "id": 47,
+    "name": "투여기간주의 - 딱 맞는 경우 (정상)",
+    "ingredients": ["트리아졸람"],
+    "totalDays": 21,
+    "expected": []
+  },
+  {
+    "id": 48,
+    "name": "노인주의 - 피나제팜",
+    "ingredients": ["피나제팜"],
+    "expected": [
+      { "type": "ELDERLY", "involvedIngredients": ["피나제팜"] }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "효능군중복 - 독사조신 + 프라조신 (Alpha Blockers)",
+    "ingredients": ["독사조신", "프라조신"],
+    "expected": [
+      { "type": "DUPLICATE", "involvedIngredients": ["독사조신", "프라조신"] }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "복합 - 노인주의 + 임부금기 + 투여기간주의",
+    "ingredients": ["트리아졸람", "클로나제팜"],
+    "totalDays": 30,
+    "expected": [
+      { "type": "ELDERLY", "involvedIngredients": ["클로나제팜"] },
+      { "type": "PREGNANCY", "involvedIngredients": ["트리아졸람"] },
+      { "type": "DURATION", "involvedIngredients": ["트리아졸람"] }
     ]
   }
 ]

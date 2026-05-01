@@ -1,9 +1,11 @@
 [
   {
     "id": 1,
-    "name": "병용금기 2약제",
+    "name": "병용금기 - 이트라코나졸 + 심바스타틴",
     "method": "graph-rag",
-    "elapsed": 3443,
+    "elapsed": 4301,
+    "detectedCount": 4,
+    "expectedCount": 1,
     "detected": [
       {
         "type": "CONTRAINDICATED",
@@ -41,56 +43,34 @@
         ]
       }
     ],
-    "precision": 0.3333333333333333,
     "recall": 1
   },
   {
     "id": 2,
-    "name": "다약제 5개",
+    "name": "병용금기 - 메트포르민 + 이오딕사놀",
     "method": "graph-rag",
-    "elapsed": 7287,
+    "elapsed": 3282,
+    "detectedCount": 4,
+    "expectedCount": 1,
     "detected": [
       {
-        "type": "ELDERLY",
+        "type": "CONTRAINDICATED",
         "involvedIngredients": [
-          "디아제팜"
+          "메트포르민",
+          "이오딕사놀"
         ]
       },
       {
-        "type": "ELDERLY",
+        "type": "CONTRAINDICATED",
         "involvedIngredients": [
-          "아스피린"
-        ]
-      },
-      {
-        "type": "ELDERLY",
-        "involvedIngredients": [
-          "이부프로펜"
-        ]
-      },
-      {
-        "type": "DUPLICATE",
-        "involvedIngredients": [
-          "아스피린",
-          "이부프로펜"
+          "메트포르민",
+          "이오딕사놀"
         ]
       },
       {
         "type": "PREGNANCY",
         "involvedIngredients": [
-          "디아제팜"
-        ]
-      },
-      {
-        "type": "PREGNANCY",
-        "involvedIngredients": [
-          "아스피린"
-        ]
-      },
-      {
-        "type": "PREGNANCY",
-        "involvedIngredients": [
-          "이부프로펜"
+          "이오딕사놀"
         ]
       },
       {
@@ -98,11 +78,45 @@
         "involvedIngredients": [
           "메트포르민"
         ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "메트포르민",
+          "이오딕사놀"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 3,
+    "name": "병용금기 - 메트포르민 + 이오트로란",
+    "method": "graph-rag",
+    "elapsed": 2748,
+    "detectedCount": 3,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "메트포르민",
+          "이오트로란"
+        ]
+      },
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "메트포르민",
+          "이오트로란"
+        ]
       },
       {
         "type": "PREGNANCY",
         "involvedIngredients": [
-          "와파린"
+          "메트포르민"
         ]
       }
     ],
@@ -110,10 +124,325 @@
       {
         "type": "CONTRAINDICATED",
         "involvedIngredients": [
-          "아스피린",
-          "와파린"
+          "메트포르민",
+          "이오트로란"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 4,
+    "name": "병용금기 - 메토트렉세이트 + 티아프로펜산",
+    "method": "graph-rag",
+    "elapsed": 3929,
+    "detectedCount": 4,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "메토트렉세이트",
+          "티아프로펜산"
         ]
       },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "티아프로펜산"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "티아프로펜산"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "메토트렉세이트"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "메토트렉세이트",
+          "티아프로펜산"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 5,
+    "name": "병용금기 - 포르모테롤 + 노르에피네프린",
+    "method": "graph-rag",
+    "elapsed": 2722,
+    "detectedCount": 3,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "노르에피네프린",
+          "포르모테롤"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "포르모테롤"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "노르에피네프린"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "포르모테롤",
+          "노르에피네프린"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 6,
+    "name": "병용금기 - 포르모테롤 + 에피네프린",
+    "method": "graph-rag",
+    "elapsed": 2747,
+    "detectedCount": 3,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "에피네프린",
+          "포르모테롤"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "포르모테롤"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "에피네프린"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "포르모테롤",
+          "에피네프린"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 7,
+    "name": "병용금기 - 덱사메타손 + 스파플록사신",
+    "method": "graph-rag",
+    "elapsed": 2840,
+    "detectedCount": 3,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "덱사메타손",
+          "스파플록사신"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "덱사메타손"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "스파플록사신"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "덱사메타손",
+          "스파플록사신"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 8,
+    "name": "병용금기 - 히드로코르티손 + 스파플록사신",
+    "method": "graph-rag",
+    "elapsed": 3895,
+    "detectedCount": 3,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "스파플록사신",
+          "히드로코르티손"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "히드로코르티손"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "스파플록사신"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "히드로코르티손",
+          "스파플록사신"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 9,
+    "name": "병용금기 - 프레드니솔론 + 스파플록사신",
+    "method": "graph-rag",
+    "elapsed": 3831,
+    "detectedCount": 3,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "스파플록사신",
+          "프레드니솔론"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "프레드니솔론"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "스파플록사신"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "프레드니솔론",
+          "스파플록사신"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 10,
+    "name": "병용금기 - 헥소프레날린 + 노르에피네프린",
+    "method": "graph-rag",
+    "elapsed": 1906,
+    "detectedCount": 2,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "노르에피네프린",
+          "헥소프레날린"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "노르에피네프린"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "헥소프레날린",
+          "노르에피네프린"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 11,
+    "name": "노인주의 - 플루라제팜",
+    "method": "graph-rag",
+    "elapsed": 3084,
+    "detectedCount": 2,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "플루라제팜"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "플루라제팜"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "플루라제팜"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 12,
+    "name": "노인주의 - 디아제팜",
+    "method": "graph-rag",
+    "elapsed": 2452,
+    "detectedCount": 2,
+    "expectedCount": 1,
+    "detected": [
       {
         "type": "ELDERLY",
         "involvedIngredients": [
@@ -121,37 +450,29 @@
         ]
       },
       {
-        "type": "ELDERLY",
+        "type": "PREGNANCY",
         "involvedIngredients": [
-          "이부프로펜"
-        ]
-      },
-      {
-        "type": "DUPLICATE",
-        "involvedIngredients": [
-          "아스피린",
-          "이부프로펜"
+          "디아제팜"
         ]
       }
     ],
-    "precision": 0.375,
-    "recall": 0.75
-  },
-  {
-    "id": 3,
-    "name": "안전한 조합 (False Positive 테스트)",
-    "method": "graph-rag",
-    "elapsed": 27,
-    "detected": [],
-    "expected": [],
-    "precision": 1,
+    "expected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "디아제팜"
+        ]
+      }
+    ],
     "recall": 1
   },
   {
-    "id": 4,
-    "name": "노인주의",
+    "id": 13,
+    "name": "노인주의 - 클로르디아제폭시드",
     "method": "graph-rag",
-    "elapsed": 2231,
+    "elapsed": 2716,
+    "detectedCount": 2,
+    "expectedCount": 1,
     "detected": [
       {
         "type": "ELDERLY",
@@ -172,22 +493,951 @@
         "involvedIngredients": [
           "클로르디아제폭시드"
         ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 14,
+    "name": "노인주의 - 클로나제팜",
+    "method": "graph-rag",
+    "elapsed": 2841,
+    "detectedCount": 2,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "클로나제팜"
+        ]
       },
       {
         "type": "PREGNANCY",
         "involvedIngredients": [
-          "클로르디아제폭시드"
+          "클로나제팜"
         ]
       }
     ],
-    "precision": 1,
+    "expected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "클로나제팜"
+        ]
+      }
+    ],
     "recall": 1
   },
   {
-    "id": 5,
-    "name": "효능군중복",
+    "id": 15,
+    "name": "노인주의 - 몰린돈",
     "method": "graph-rag",
-    "elapsed": 4201,
+    "elapsed": 2550,
+    "detectedCount": 2,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "몰린돈"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "몰린돈"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "몰린돈"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 16,
+    "name": "노인주의 - 플루니트라제팜",
+    "method": "graph-rag",
+    "elapsed": 2892,
+    "detectedCount": 2,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "플루니트라제팜"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "플루니트라제팜"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "플루니트라제팜"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 17,
+    "name": "노인주의 - 클로바잠",
+    "method": "graph-rag",
+    "elapsed": 2507,
+    "detectedCount": 2,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "클로바잠"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "클로바잠"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "클로바잠"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 18,
+    "name": "노인주의 - 멕사졸람",
+    "method": "graph-rag",
+    "elapsed": 1979,
+    "detectedCount": 2,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "멕사졸람"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "멕사졸람"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "멕사졸람"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 19,
+    "name": "효능군중복 - 아스피린 + 이부프로펜 (소염제)",
+    "method": "graph-rag",
+    "elapsed": 4338,
+    "detectedCount": 5,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "아스피린"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "이부프로펜"
+        ]
+      },
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "아스피린",
+          "이부프로펜"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "아스피린"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "이부프로펜"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "아스피린",
+          "이부프로펜"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 20,
+    "name": "효능군중복 - 아세클로페낙 + 나프록센 (소염제)",
+    "method": "graph-rag",
+    "elapsed": 8405,
+    "detectedCount": 5,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "나프록센"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "아세클로페낙"
+        ]
+      },
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "나프록센",
+          "아세클로페낙"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "나프록센"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "아세클로페낙"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "아세클로페낙",
+          "나프록센"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 21,
+    "name": "효능군중복 - 세레콕시브 + 디클로페낙 (소염제)",
+    "method": "graph-rag",
+    "elapsed": 5850,
+    "detectedCount": 5,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "세레콕시브"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "디클로페낙"
+        ]
+      },
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "세레콕시브",
+          "디클로페낙"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "세레콕시브"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "디클로페낙"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "세레콕시브",
+          "디클로페낙"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 22,
+    "name": "효능군중복 - 포르모테롤 + 살부타몰 (베타수용체)",
+    "method": "graph-rag",
+    "elapsed": 3427,
+    "detectedCount": 3,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "포르모테롤",
+          "살부타몰"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "포르모테롤"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "살부타몰"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "포르모테롤",
+          "살부타몰"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 23,
+    "name": "효능군중복 - 팔리페리돈 + 리스페리돈 (항정신병)",
+    "method": "graph-rag",
+    "elapsed": 4751,
+    "detectedCount": 5,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "팔리페리돈"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "리스페리돈"
+        ]
+      },
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "팔리페리돈",
+          "리스페리돈"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "팔리페리돈"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "리스페리돈"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "팔리페리돈",
+          "리스페리돈"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 24,
+    "name": "효능군중복 - 쿠에티아핀 + 올란자핀 (항정신병)",
+    "method": "graph-rag",
+    "elapsed": 4955,
+    "detectedCount": 5,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "쿠에티아핀"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "올란자핀"
+        ]
+      },
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "쿠에티아핀",
+          "올란자핀"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "쿠에티아핀"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "올란자핀"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "쿠에티아핀",
+          "올란자핀"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 25,
+    "name": "효능군중복 - 글리메피리드 + 글리클라지드 (설포닐우레아)",
+    "method": "graph-rag",
+    "elapsed": 2997,
+    "detectedCount": 3,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "글리메피리드",
+          "글리클라지드"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "글리메피리드"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "글리클라지드"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "글리메피리드",
+          "글리클라지드"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 26,
+    "name": "효능군중복 - 베라파밀 + 딜티아젬 (CCB)",
+    "method": "graph-rag",
+    "elapsed": 3371,
+    "detectedCount": 3,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "베라파밀",
+          "딜티아젬"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "베라파밀"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "딜티아젬"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "베라파밀",
+          "딜티아젬"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 27,
+    "name": "임부금기 1등급 - 로수바스타틴",
+    "method": "graph-rag",
+    "elapsed": 6294,
+    "detectedCount": 1,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "로수바스타틴"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "로수바스타틴"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 28,
+    "name": "임부금기 1등급 - 프라바스타틴",
+    "method": "graph-rag",
+    "elapsed": 3989,
+    "detectedCount": 1,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "프라바스타틴"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "프라바스타틴"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 29,
+    "name": "임부금기 1등급 - 플루바스타틴",
+    "method": "graph-rag",
+    "elapsed": 10083,
+    "detectedCount": 1,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "플루바스타틴"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "플루바스타틴"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 30,
+    "name": "임부금기 1등급 - 피타바스타틴",
+    "method": "graph-rag",
+    "elapsed": 906,
+    "detectedCount": 1,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "피타바스타틴"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "피타바스타틴"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 31,
+    "name": "임부금기 1등급 - 플루오로우라실",
+    "method": "graph-rag",
+    "elapsed": 1438,
+    "detectedCount": 1,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "플루오로우라실"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "플루오로우라실"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 32,
+    "name": "임부금기 1등급 - 에티닐에스트라디올",
+    "method": "graph-rag",
+    "elapsed": 1525,
+    "detectedCount": 1,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "에티닐에스트라디올"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "에티닐에스트라디올"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 33,
+    "name": "투여기간주의 - 나프록센 초과",
+    "method": "graph-rag",
+    "elapsed": 2595,
+    "detectedCount": 3,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "나프록센"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "나프록센"
+        ]
+      },
+      {
+        "type": "DURATION",
+        "involvedIngredients": [
+          "나프록센"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "DURATION",
+        "involvedIngredients": [
+          "나프록센"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 34,
+    "name": "투여기간주의 - 졸피뎀 초과",
+    "method": "graph-rag",
+    "elapsed": 2641,
+    "detectedCount": 2,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "졸피뎀타르타르산염"
+        ]
+      },
+      {
+        "type": "DURATION",
+        "involvedIngredients": [
+          "졸피뎀타르타르산염"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "DURATION",
+        "involvedIngredients": [
+          "졸피뎀타르타르산염"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 35,
+    "name": "투여기간주의 - 트리아졸람 초과",
+    "method": "graph-rag",
+    "elapsed": 1508,
+    "detectedCount": 2,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "트리아졸람"
+        ]
+      },
+      {
+        "type": "DURATION",
+        "involvedIngredients": [
+          "트리아졸람"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "DURATION",
+        "involvedIngredients": [
+          "트리아졸람"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 36,
+    "name": "투여기간주의 - 리네졸리드 초과",
+    "method": "graph-rag",
+    "elapsed": 3256,
+    "detectedCount": 2,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "리네졸리드"
+        ]
+      },
+      {
+        "type": "DURATION",
+        "involvedIngredients": [
+          "리네졸리드"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "DURATION",
+        "involvedIngredients": [
+          "리네졸리드"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 37,
+    "name": "투여기간주의 - 클로르페니라민 초과",
+    "method": "graph-rag",
+    "elapsed": 2621,
+    "detectedCount": 2,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "클로르페니라민"
+        ]
+      },
+      {
+        "type": "DURATION",
+        "involvedIngredients": [
+          "클로르페니라민"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "DURATION",
+        "involvedIngredients": [
+          "클로르페니라민"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 38,
+    "name": "투여기간주의 - 옥시메타졸린 초과",
+    "method": "graph-rag",
+    "elapsed": 8998,
+    "detectedCount": 1,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "DURATION",
+        "involvedIngredients": [
+          "옥시메타졸린"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "DURATION",
+        "involvedIngredients": [
+          "옥시메타졸린"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 39,
+    "name": "안전한 조합 - 비타민C + 오메가3",
+    "method": "graph-rag",
+    "elapsed": 16,
+    "detectedCount": 0,
+    "expectedCount": 0,
+    "detected": [],
+    "expected": [],
+    "recall": 1
+  },
+  {
+    "id": 40,
+    "name": "안전한 조합 - 단일 성분 (아세트아미노펜)",
+    "method": "graph-rag",
+    "elapsed": 23,
+    "detectedCount": 0,
+    "expectedCount": 0,
+    "detected": [],
+    "expected": [],
+    "recall": 1
+  },
+  {
+    "id": 41,
+    "name": "복합 - 병용금기 + 노인주의",
+    "method": "graph-rag",
+    "elapsed": 4408,
+    "detectedCount": 4,
+    "expectedCount": 2,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "플루라제팜"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "디아제팜"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "플루라제팜"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "디아제팜"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "디아제팜"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "플루라제팜"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 42,
+    "name": "복합 - 효능군중복 + 노인주의",
+    "method": "graph-rag",
+    "elapsed": 3664,
+    "detectedCount": 5,
+    "expectedCount": 3,
     "detected": [
       {
         "type": "ELDERLY",
@@ -242,31 +1492,401 @@
         ]
       }
     ],
-    "precision": 0.6,
     "recall": 1
   },
   {
-    "id": 6,
-    "name": "임부금기",
+    "id": 43,
+    "name": "복합 - 병용금기 + 효능군중복",
     "method": "graph-rag",
-    "elapsed": 1169,
+    "elapsed": 3211,
+    "detectedCount": 6,
+    "expectedCount": 2,
     "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "메트포르민",
+          "이오트로란"
+        ]
+      },
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "메트포르민",
+          "이오딕사놀"
+        ]
+      },
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "메트포르민",
+          "이오트로란"
+        ]
+      },
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "메트포르민",
+          "이오딕사놀"
+        ]
+      },
       {
         "type": "PREGNANCY",
         "involvedIngredients": [
-          "프로게스테론"
+          "이오딕사놀"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "메트포르민"
         ]
       }
     ],
     "expected": [
       {
-        "type": "PREGNANCY",
+        "type": "CONTRAINDICATED",
         "involvedIngredients": [
-          "프로게스테론"
+          "메트포르민",
+          "이오딕사놀"
+        ]
+      },
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "메트포르민",
+          "이오트로란"
         ]
       }
     ],
-    "precision": 1,
+    "recall": 1
+  },
+  {
+    "id": 44,
+    "name": "복합 - 임부금기 + 병용금기",
+    "method": "graph-rag",
+    "elapsed": 5307,
+    "detectedCount": 6,
+    "expectedCount": 2,
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "심바스타틴",
+          "이트라코나졸"
+        ]
+      },
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "심바스타틴",
+          "이트라코나졸"
+        ]
+      },
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "로수바스타틴",
+          "심바스타틴"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "로수바스타틴"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "이트라코나졸"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "심바스타틴"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "이트라코나졸",
+          "심바스타틴"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "로수바스타틴"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 45,
+    "name": "복합 - 다약제 (5개)",
+    "method": "graph-rag",
+    "elapsed": 6959,
+    "detectedCount": 11,
+    "expectedCount": 3,
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "메트포르민",
+          "이오딕사놀"
+        ]
+      },
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "메트포르민",
+          "이오딕사놀"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "디아제팜"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "아스피린"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "이부프로펜"
+        ]
+      },
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "아스피린",
+          "이부프로펜"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "이오딕사놀"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "디아제팜"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "아스피린"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "이부프로펜"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "메트포르민"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "메트포르민",
+          "이오딕사놀"
+        ]
+      },
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "아스피린",
+          "이부프로펜"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "디아제팜"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 46,
+    "name": "투여기간주의 - 기간 안 넘은 경우 (정상)",
+    "method": "graph-rag",
+    "elapsed": 2884,
+    "detectedCount": 2,
+    "expectedCount": 0,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "나프록센"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "나프록센"
+        ]
+      }
+    ],
+    "expected": [],
+    "recall": 0
+  },
+  {
+    "id": 47,
+    "name": "투여기간주의 - 딱 맞는 경우 (정상)",
+    "method": "graph-rag",
+    "elapsed": 1106,
+    "detectedCount": 1,
+    "expectedCount": 0,
+    "detected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "트리아졸람"
+        ]
+      }
+    ],
+    "expected": [],
+    "recall": 0
+  },
+  {
+    "id": 48,
+    "name": "노인주의 - 피나제팜",
+    "method": "graph-rag",
+    "elapsed": 2106,
+    "detectedCount": 2,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "피나제팜"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "피나제팜"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "피나제팜"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 49,
+    "name": "효능군중복 - 독사조신 + 프라조신 (Alpha Blockers)",
+    "method": "graph-rag",
+    "elapsed": 1700,
+    "detectedCount": 2,
+    "expectedCount": 1,
+    "detected": [
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "독사조신",
+          "프라조신"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "독사조신"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "독사조신",
+          "프라조신"
+        ]
+      }
+    ],
+    "recall": 1
+  },
+  {
+    "id": 50,
+    "name": "복합 - 노인주의 + 임부금기 + 투여기간주의",
+    "method": "graph-rag",
+    "elapsed": 7423,
+    "detectedCount": 4,
+    "expectedCount": 3,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "클로나제팜"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "클로나제팜"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "트리아졸람"
+        ]
+      },
+      {
+        "type": "DURATION",
+        "involvedIngredients": [
+          "트리아졸람"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "클로나제팜"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "트리아졸람"
+        ]
+      },
+      {
+        "type": "DURATION",
+        "involvedIngredients": [
+          "트리아졸람"
+        ]
+      }
+    ],
     "recall": 1
   }
 ]
