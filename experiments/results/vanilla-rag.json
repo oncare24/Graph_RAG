@@ -1,0 +1,176 @@
+[
+  {
+    "id": 1,
+    "name": "병용금기 2약제",
+    "method": "vanilla-rag",
+    "elapsed": 2681,
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "severity": "CRITICAL",
+        "involvedIngredients": [
+          "이트라코나졸",
+          "심바스타틴"
+        ],
+        "reason": "근육병증, 횡문근융해증, 간효소 이상 발생 위험 증가"
+      }
+    ],
+    "expected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "이트라코나졸",
+          "심바스타틴"
+        ]
+      }
+    ],
+    "precision": 1,
+    "recall": 1
+  },
+  {
+    "id": 2,
+    "name": "다약제 5개",
+    "method": "vanilla-rag",
+    "elapsed": 798,
+    "detected": [],
+    "expected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "아스피린",
+          "와파린"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "디아제팜"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "이부프로펜"
+        ]
+      },
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "아스피린",
+          "이부프로펜"
+        ]
+      }
+    ],
+    "precision": 0,
+    "recall": 0
+  },
+  {
+    "id": 3,
+    "name": "안전한 조합 (False Positive 테스트)",
+    "method": "vanilla-rag",
+    "elapsed": 884,
+    "detected": [],
+    "expected": [],
+    "precision": 1,
+    "recall": 1
+  },
+  {
+    "id": 4,
+    "name": "노인주의",
+    "method": "vanilla-rag",
+    "elapsed": 2673,
+    "detected": [
+      {
+        "type": "DUPLICATE",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "클로르디아제폭시드",
+          "다른 benzodiazepine 계열 약물"
+        ],
+        "reason": "클로르디아제폭시드는 항불안제 (benzodiazepine계) 계열 약물로, 같은 계열 약물을 중복 복용하지 말아야 합니다."
+      }
+    ],
+    "expected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "클로르디아제폭시드"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "클로르디아제폭시드"
+        ]
+      }
+    ],
+    "precision": 0,
+    "recall": 0
+  },
+  {
+    "id": 5,
+    "name": "효능군중복",
+    "method": "vanilla-rag",
+    "elapsed": 2298,
+    "detected": [
+      {
+        "type": "PREGNANCY",
+        "severity": "CRITICAL",
+        "involvedIngredients": [
+          "아세클로페낙",
+          "이부프로펜"
+        ],
+        "reason": "두 성분 모두 임부에 금기이며, 특히 임신 말기에 사용 시 태아의 동맥관 조기 폐쇄 및 생존율 감소 위험이 있음."
+      }
+    ],
+    "expected": [
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "아세클로페낙",
+          "이부프로펜"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "아세클로페낙"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "이부프로펜"
+        ]
+      }
+    ],
+    "precision": 0,
+    "recall": 0
+  },
+  {
+    "id": 6,
+    "name": "임부금기",
+    "method": "vanilla-rag",
+    "elapsed": 1922,
+    "detected": [
+      {
+        "type": "PREGNANCY",
+        "severity": "CRITICAL",
+        "involvedIngredients": [
+          "프로게스테론"
+        ],
+        "reason": "프로게스테론은 임부금기 성분으로, 1등급 임부에 대한 안전성이 미확립되어 있다."
+      }
+    ],
+    "expected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "프로게스테론"
+        ]
+      }
+    ],
+    "precision": 1,
+    "recall": 1
+  }
+]

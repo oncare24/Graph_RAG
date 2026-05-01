@@ -1,0 +1,25 @@
+{
+  "name": "bosalpim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mystery2LEE/Bosalpim.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mystery2LEE/Bosalpim/issues"
+  },
+  "homepage": "https://github.com/Mystery2LEE/Bosalpim#readme",
+  "dependencies": {
+    "chromadb": "^3.4.3",
+    "neo4j-driver": "^6.0.1",
+    "openai": "^6.34.0"
+  }
+}

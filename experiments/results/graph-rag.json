@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "name": "병용금기 2약제",
+    "method": "graph-rag",
+    "elapsed": 3443,
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "심바스타틴",
+          "이트라코나졸"
+        ]
+      },
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "심바스타틴",
+          "이트라코나졸"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "이트라코나졸"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "심바스타틴"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "이트라코나졸",
+          "심바스타틴"
+        ]
+      }
+    ],
+    "precision": 0.3333333333333333,
+    "recall": 1
+  },
+  {
+    "id": 2,
+    "name": "다약제 5개",
+    "method": "graph-rag",
+    "elapsed": 7287,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "디아제팜"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "아스피린"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "이부프로펜"
+        ]
+      },
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "아스피린",
+          "이부프로펜"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "디아제팜"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "아스피린"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "이부프로펜"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "메트포르민"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "와파린"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "CONTRAINDICATED",
+        "involvedIngredients": [
+          "아스피린",
+          "와파린"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "디아제팜"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "이부프로펜"
+        ]
+      },
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "아스피린",
+          "이부프로펜"
+        ]
+      }
+    ],
+    "precision": 0.375,
+    "recall": 0.75
+  },
+  {
+    "id": 3,
+    "name": "안전한 조합 (False Positive 테스트)",
+    "method": "graph-rag",
+    "elapsed": 27,
+    "detected": [],
+    "expected": [],
+    "precision": 1,
+    "recall": 1
+  },
+  {
+    "id": 4,
+    "name": "노인주의",
+    "method": "graph-rag",
+    "elapsed": 2231,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "클로르디아제폭시드"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "클로르디아제폭시드"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "클로르디아제폭시드"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "클로르디아제폭시드"
+        ]
+      }
+    ],
+    "precision": 1,
+    "recall": 1
+  },
+  {
+    "id": 5,
+    "name": "효능군중복",
+    "method": "graph-rag",
+    "elapsed": 4201,
+    "detected": [
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "이부프로펜"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "아세클로페낙"
+        ]
+      },
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "이부프로펜",
+          "아세클로페낙"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "이부프로펜"
+        ]
+      },
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "아세클로페낙"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "DUPLICATE",
+        "involvedIngredients": [
+          "아세클로페낙",
+          "이부프로펜"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "아세클로페낙"
+        ]
+      },
+      {
+        "type": "ELDERLY",
+        "involvedIngredients": [
+          "이부프로펜"
+        ]
+      }
+    ],
+    "precision": 0.6,
+    "recall": 1
+  },
+  {
+    "id": 6,
+    "name": "임부금기",
+    "method": "graph-rag",
+    "elapsed": 1169,
+    "detected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "프로게스테론"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "type": "PREGNANCY",
+        "involvedIngredients": [
+          "프로게스테론"
+        ]
+      }
+    ],
+    "precision": 1,
+    "recall": 1
+  }
+]

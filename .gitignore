@@ -1,0 +1,17 @@
+# 환경변수
+.env
+.env.local
+
+# 데이터 파일 (용량 크고 민감)
+data/raw/
+data/processed/
+
+# Node
+node_modules/
+dist/
+
+# 로그
+*.log
+
+# IDE
+.vscode/

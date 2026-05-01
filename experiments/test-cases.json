@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "name": "병용금기 2약제",
+    "ingredients": ["이트라코나졸", "심바스타틴"],
+    "expected": [
+      { "type": "CONTRAINDICATED", "involvedIngredients": ["이트라코나졸", "심바스타틴"] }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "다약제 5개",
+    "ingredients": ["아스피린", "와파린", "메트포르민", "디아제팜", "이부프로펜"],
+    "expected": [
+      { "type": "CONTRAINDICATED", "involvedIngredients": ["아스피린", "와파린"] },
+      { "type": "ELDERLY", "involvedIngredients": ["디아제팜"] },
+      { "type": "ELDERLY", "involvedIngredients": ["이부프로펜"] },
+      { "type": "DUPLICATE", "involvedIngredients": ["아스피린", "이부프로펜"] }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "안전한 조합 (False Positive 테스트)",
+    "ingredients": ["비타민C", "오메가3"],
+    "expected": []
+  },
+  {
+    "id": 4,
+    "name": "노인주의",
+    "ingredients": ["클로르디아제폭시드"],
+    "expected": [
+      { "type": "ELDERLY", "involvedIngredients": ["클로르디아제폭시드"] },
+      { "type": "PREGNANCY", "involvedIngredients": ["클로르디아제폭시드"] }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "효능군중복",
+    "ingredients": ["아세클로페낙", "이부프로펜"],
+    "expected": [
+      { "type": "DUPLICATE", "involvedIngredients": ["아세클로페낙", "이부프로펜"] },
+      { "type": "ELDERLY", "involvedIngredients": ["아세클로페낙"] },
+      { "type": "ELDERLY", "involvedIngredients": ["이부프로펜"] }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "임부금기",
+    "ingredients": ["프로게스테론"],
+    "expected": [
+      { "type": "PREGNANCY", "involvedIngredients": ["프로게스테론"] }
+    ]
+  }
+]
