@@ -3,7 +3,7 @@
     "id": 1,
     "name": "병용금기 - 이트라코나졸 + 심바스타틴",
     "method": "vanilla-rag",
-    "elapsed": 4206,
+    "elapsed": 5990,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -14,7 +14,7 @@
           "이트라코나졸",
           "심바스타틴"
         ],
-        "reason": "근육병증, 횡문근융해증, 간효소 이상 발생 위험 증가"
+        "reason": "이트라코나졸과 심바스타틴을 함께 복용하면 근육병증, 횡문근융해증 및 간 효소 이상 발생 위험이 증가합니다."
       }
     ],
     "expected": [
@@ -32,7 +32,7 @@
     "id": 2,
     "name": "병용금기 - 메트포르민 + 이오딕사놀",
     "method": "vanilla-rag",
-    "elapsed": 3052,
+    "elapsed": 2965,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -43,7 +43,7 @@
           "메트포르민",
           "이오딕사놀"
         ],
-        "reason": "이오헥솔과 메트포르민을 함께 복용하면 기능적 신부전에 의해 유산 산성증 촉진"
+        "reason": "기능적 신부전에 의해 유산 산성증 촉진"
       }
     ],
     "expected": [
@@ -61,7 +61,7 @@
     "id": 3,
     "name": "병용금기 - 메트포르민 + 이오트로란",
     "method": "vanilla-rag",
-    "elapsed": 3224,
+    "elapsed": 3061,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -72,7 +72,7 @@
           "메트포르민",
           "이오트로란"
         ],
-        "reason": "이오헥솔과 메트포르민을 함께 복용하면 안됩니다. 기능적 신부전에 의해 유산 산성증 촉진"
+        "reason": "이오헥솔과 메트포르민을 함께 복용하면 안되며, 기능적 신부전에 의해 유산산성증 촉진"
       }
     ],
     "expected": [
@@ -90,7 +90,7 @@
     "id": 4,
     "name": "병용금기 - 메토트렉세이트 + 티아프로펜산",
     "method": "vanilla-rag",
-    "elapsed": 5518,
+    "elapsed": 7060,
     "detectedCount": 3,
     "expectedCount": 1,
     "detected": [
@@ -101,7 +101,7 @@
           "메토트렉세이트",
           "티아프로펜산"
         ],
-        "reason": "메토트렉세이트와 티아프로펜산은 함께 복용하면 안됨. (methotrexate ≥ 15mg/주에 한해 금기)"
+        "reason": "메토트렉세이트와 티아프로펜산은 함께 복용하면 안됩니다. 메토트렉세이트 ≥ 15mg/주에 한해 금기."
       },
       {
         "type": "PREGNANCY",
@@ -109,7 +109,7 @@
         "involvedIngredients": [
           "메토트렉세이트"
         ],
-        "reason": "메토트렉세이트은 임부금기 성분으로 임신 1기에 유산, 태아사망 및 선천기형 위험이 있음."
+        "reason": "메토트렉세이트은 임부금기 성분이며 임신 초기 투여 시 태아사망, 선천기형 보고."
       },
       {
         "type": "PREGNANCY",
@@ -117,7 +117,7 @@
         "involvedIngredients": [
           "티아프로펜산"
         ],
-        "reason": "티아프로펜산은 임부금기 성분으로 임신 말기에 태아의 동맥관조기폐쇄 가능성이 있음."
+        "reason": "티아프로펜산은 임부금기 성분이며 임신 말기 투여 시 태아의 동맥관조기폐쇄 가능성."
       }
     ],
     "expected": [
@@ -135,7 +135,7 @@
     "id": 5,
     "name": "병용금기 - 포르모테롤 + 노르에피네프린",
     "method": "vanilla-rag",
-    "elapsed": 1847,
+    "elapsed": 2550,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -146,7 +146,7 @@
           "포르모테롤",
           "노르에피네프린"
         ],
-        "reason": "함께 복용 시 부정맥 또는 심정지 위험이 있음."
+        "reason": "포르모테롤과 노르에피네프린을 함께 복용하면 부정맥 또는 심정지가 발생할 수 있습니다."
       }
     ],
     "expected": [
@@ -164,7 +164,7 @@
     "id": 6,
     "name": "병용금기 - 포르모테롤 + 에피네프린",
     "method": "vanilla-rag",
-    "elapsed": 2730,
+    "elapsed": 3118,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -175,7 +175,7 @@
           "포르모테롤",
           "에피네프린"
         ],
-        "reason": "포르모테롤은 베타수용체 효능제에 속하며, 에피네프린도 그러므로 같은 계열 약물의 중복 복용을 피해야 합니다."
+        "reason": "포르모테롤과 에피네프린은 모두 베타수용체 효능제 계열 약물로, 같은 계열 약물을 중복 복용하면 안 됩니다."
       }
     ],
     "expected": [
@@ -193,7 +193,7 @@
     "id": 7,
     "name": "병용금기 - 덱사메타손 + 스파플록사신",
     "method": "vanilla-rag",
-    "elapsed": 2998,
+    "elapsed": 4020,
     "detectedCount": 3,
     "expectedCount": 1,
     "detected": [
@@ -212,7 +212,7 @@
         "involvedIngredients": [
           "덱사메타손"
         ],
-        "reason": "2등급 임부에 대한 안전성 미확립, 동물실험에서 기형발생 작용 보고"
+        "reason": "임부에 대한 안전성 미확립, 태아에게 기형발생 위험"
       },
       {
         "type": "PREGNANCY",
@@ -220,7 +220,7 @@
         "involvedIngredients": [
           "스파플록사신"
         ],
-        "reason": "2등급 임부에 대한 안전성 미확립"
+        "reason": "임부에 대한 안전성 미확립"
       }
     ],
     "expected": [
@@ -238,7 +238,7 @@
     "id": 8,
     "name": "병용금기 - 히드로코르티손 + 스파플록사신",
     "method": "vanilla-rag",
-    "elapsed": 2223,
+    "elapsed": 2723,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -249,7 +249,7 @@
           "히드로코르티손",
           "스파플록사신"
         ],
-        "reason": "아킬레스건 파열 및 손상, 심혈관계 부작용 증가"
+        "reason": "아킬레스건 파열 및 손상<특히 노인>과 심혈관계 부작용 증가"
       }
     ],
     "expected": [
@@ -267,7 +267,7 @@
     "id": 9,
     "name": "병용금기 - 프레드니솔론 + 스파플록사신",
     "method": "vanilla-rag",
-    "elapsed": 2204,
+    "elapsed": 3334,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -278,7 +278,7 @@
           "프레드니솔론",
           "스파플록사신"
         ],
-        "reason": "아킬레스건 파열 및 손상 및 심혈관계 부작용 증가"
+        "reason": "프레드니솔론과 스파플록사신을 함께 복용하면 아킬레스건 파열 및 손상과 심혈관계 부작용이 증가할 수 있음."
       }
     ],
     "expected": [
@@ -296,7 +296,7 @@
     "id": 10,
     "name": "병용금기 - 헥소프레날린 + 노르에피네프린",
     "method": "vanilla-rag",
-    "elapsed": 2375,
+    "elapsed": 1585,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -307,7 +307,7 @@
           "헥소프레날린",
           "노르에피네프린"
         ],
-        "reason": "헥소프레날린과 노르에피네프린을 함께 복용하면 부정맥 또는 심정지가 발생할 수 있음"
+        "reason": "헥소프레날린과 노르에피네프린을 함께 복용하면 부정맥 또는 심정지가 발생할 수 있음."
       }
     ],
     "expected": [
@@ -325,7 +325,7 @@
     "id": 11,
     "name": "노인주의 - 플루라제팜",
     "method": "vanilla-rag",
-    "elapsed": 3626,
+    "elapsed": 2763,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -335,7 +335,7 @@
         "involvedIngredients": [
           "플루라제팜"
         ],
-        "reason": "플루라제팜은 임부금기 성분으로, 2등급 벤조디아제핀계 약물의 최기형성 사례 및 신생아 금단증상과 관련된 위험이 보고됨."
+        "reason": "플루라제팜은 임부금기 성분으로, 2등급 벤조디아제핀계 약물의 최기형성 사례가 있으며, 신생아 포유곤란, 근긴장저하, 졸음 및 황달 증가 등의 부작용이 보고되었습니다."
       }
     ],
     "expected": [
@@ -352,7 +352,7 @@
     "id": 12,
     "name": "노인주의 - 디아제팜",
     "method": "vanilla-rag",
-    "elapsed": 2553,
+    "elapsed": 8700,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -362,7 +362,7 @@
         "involvedIngredients": [
           "디아제팜"
         ],
-        "reason": "디아제팜은 2등급 임부금기 성분으로, 최기형성 사례와 신생아 포유곤란, 근긴장저하, 졸음, 황달 증가가 보고되었으며 분만 전 연용 시 신생아 금단증상이 발생할 수 있습니다."
+        "reason": "디아제팜은 임부금기 성분으로, 2등급 최기형성 사례가 있으며 신생아 포유곤란, 근긴장저하, 졸음, 황달 증가 등의 부작용이 보고되었다. 분만 전 연용 시 신생아 금단증상(신경과민, 진전, 과다긴장 등)이 발생할 수 있으며, 정맥 주입 시에 'sleeping baby' 현상도 보고되고 있다. 임신 중 지속적 복용시 신생아 저혈압, 호흡기능저하, 체온저하 가능성도 있다."
       }
     ],
     "expected": [
@@ -379,7 +379,7 @@
     "id": 13,
     "name": "노인주의 - 클로르디아제폭시드",
     "method": "vanilla-rag",
-    "elapsed": 735,
+    "elapsed": 3015,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -397,7 +397,7 @@
     "id": 14,
     "name": "노인주의 - 클로나제팜",
     "method": "vanilla-rag",
-    "elapsed": 2469,
+    "elapsed": 5436,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -407,7 +407,7 @@
         "involvedIngredients": [
           "클로나제팜"
         ],
-        "reason": "클로나제팜은 임부금기 성분으로, 2등급 벤조디아제핀계 약물의 최기형성 사례가 있으며, 신생아에게 여러 해로운 영향을 미칠 수 있음."
+        "reason": "임부금기 성분으로 2등급 벤조디아제핀계 약물의 최기형성 사례가 대조군에 비해 높으며, 신생아 포유곤란, 근긴장저하, 졸음, 황달 증가 및 분만전 연용시 신생아 금단증상(신경과민, 진전, 과다긴장 등) 보고됨."
       }
     ],
     "expected": [
@@ -424,7 +424,7 @@
     "id": 15,
     "name": "노인주의 - 몰린돈",
     "method": "vanilla-rag",
-    "elapsed": 3519,
+    "elapsed": 4333,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -434,7 +434,7 @@
         "involvedIngredients": [
           "몰린돈"
         ],
-        "reason": "노인에서의 정형 항정신병약물 사용은 추체외로 증상, 항콜린성 부작용 등이 나타나기 쉬우므로 신중투여 필요."
+        "reason": "노인에서의 정형 항정신병약물 사용은 추체외로 증상, 항콜린성 부작용 등이 나타나기 쉬워 신중하게 투여해야 하기 때문입니다."
       },
       {
         "type": "PREGNANCY",
@@ -442,7 +442,7 @@
         "involvedIngredients": [
           "몰린돈"
         ],
-        "reason": "임신 3기에 투여시 신생아에서 추체외로장애 및 금단증상 발생 가능성 보고."
+        "reason": "몰린돈은 임부금기 성분으로, 임신 3기에 투여 시 신생아에서 추체외로 장애 및 금단증상이 발생할 가능성이 있기 때문입니다."
       }
     ],
     "expected": [
@@ -459,7 +459,7 @@
     "id": 16,
     "name": "노인주의 - 플루니트라제팜",
     "method": "vanilla-rag",
-    "elapsed": 2609,
+    "elapsed": 3758,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -469,7 +469,7 @@
         "involvedIngredients": [
           "플루니트라제팜"
         ],
-        "reason": "임부금기 성분으로 2등급 벤조디아제핀계 약물의 최기형성 사례가 있으며, 신생아에게 포유곤란, 근긴장저하, 졸음, 황달 증가 및 금단증상을 유발할 수 있음."
+        "reason": "플루니트라제팜은 2등급 벤조디아제핀계 약물로 임부금기 성분이며, 최기형성 사례 및 신생아 금단증상 보고가 있음."
       }
     ],
     "expected": [
@@ -486,7 +486,7 @@
     "id": 17,
     "name": "노인주의 - 클로바잠",
     "method": "vanilla-rag",
-    "elapsed": 1216,
+    "elapsed": 2143,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -496,7 +496,7 @@
         "involvedIngredients": [
           "클로바잠"
         ],
-        "reason": "클로바잠은 임부금기 성분이며, 2등급 임부에 대한 안전성 미확립."
+        "reason": "클로바잠은 임부금기 성분으로 2등급 임부에 대한 안전성이 미확립되어 있습니다."
       }
     ],
     "expected": [
@@ -513,7 +513,7 @@
     "id": 18,
     "name": "노인주의 - 멕사졸람",
     "method": "vanilla-rag",
-    "elapsed": 2000,
+    "elapsed": 2152,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -523,7 +523,7 @@
         "involvedIngredients": [
           "멕사졸람"
         ],
-        "reason": "임부금기 성분으로, 최기형성 사례 및 신생아 금단증상 보고가 있음."
+        "reason": "임부금기 성분으로, 최기형성 사례와 신생아 금단증상 등이 보고됨."
       }
     ],
     "expected": [
@@ -540,17 +540,17 @@
     "id": 19,
     "name": "효능군중복 - 아스피린 + 이부프로펜 (소염제)",
     "method": "vanilla-rag",
-    "elapsed": 2583,
+    "elapsed": 4287,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
       {
         "type": "PREGNANCY",
-        "severity": "CRITICAL",
+        "severity": "HIGH",
         "involvedIngredients": [
           "이부프로펜"
         ],
-        "reason": "임신 3기에 사용 시 출산 지연, 출산 시 실혈, 신생아 출혈 및 태아의 심폐독성(동맥관 조기폐쇄를 수반하는 폐고혈압) 발생 가능"
+        "reason": "임신 3기에 사용 시 출産 지연, 출産시 실혈, 신생아 출혈, 태아의 심폐독성, 신기능 저하로 양수과소증 등을 초래할 수 있음."
       }
     ],
     "expected": [
@@ -568,8 +568,8 @@
     "id": 20,
     "name": "효능군중복 - 아세클로페낙 + 나프록센 (소염제)",
     "method": "vanilla-rag",
-    "elapsed": 3031,
-    "detectedCount": 1,
+    "elapsed": 3881,
+    "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
       {
@@ -579,7 +579,16 @@
           "아세클로페낙",
           "나프록센"
         ],
-        "reason": "아세클로페낙은 임부금기 성분으로 임신 중 사용 시 태아의 동맥관조기폐쇄 가능성이 있으며, 비스테로이드성 소염진통제는 난산발생빈도 증가, 분만지연, 태아 생존율 감소를 초래할 수 있습니다."
+        "reason": "아세클로페낙은 임부금기 성분이며, 다른 비스테로이드성 소염진통제인 나프록센과 함께 사용 시 태아에게 위험을 초래할 수 있음."
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "아세클로페낙",
+          "나프록센"
+        ],
+        "reason": "아세클로페낙과 나프록센은 모두 비스테로이드성 소염제에 해당하므로 중복 복용하지 않아야 함."
       }
     ],
     "expected": [
@@ -591,26 +600,16 @@
         ]
       }
     ],
-    "recall": 0
+    "recall": 1
   },
   {
     "id": 21,
     "name": "효능군중복 - 세레콕시브 + 디클로페낙 (소염제)",
     "method": "vanilla-rag",
-    "elapsed": 5868,
-    "detectedCount": 1,
+    "elapsed": 748,
+    "detectedCount": 0,
     "expectedCount": 1,
-    "detected": [
-      {
-        "type": "PREGNANCY",
-        "severity": "HIGH",
-        "involvedIngredients": [
-          "세레콕시브",
-          "디클로페낙"
-        ],
-        "reason": "임신 중 비스테로이드성 소염진통제(예: 세레콕시브, 디클로페낙)의 사용이 태아에게 해로운 영향을 미칠 수 있으며, 동물 실험에서 난산 발생 빈도 증가, 분만 지연, 태아 생존율 감소가 보고되었습니다."
-      }
-    ],
+    "detected": [],
     "expected": [
       {
         "type": "DUPLICATE",
@@ -626,7 +625,7 @@
     "id": 22,
     "name": "효능군중복 - 포르모테롤 + 살부타몰 (베타수용체)",
     "method": "vanilla-rag",
-    "elapsed": 1926,
+    "elapsed": 2960,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -637,7 +636,7 @@
           "포르모테롤",
           "살부타몰"
         ],
-        "reason": "포르모테롤과 살부타몰은 모두 베타수용체 효능제 계열 약물로, 같은 계열 약물을 중복 복용하지 마세요."
+        "reason": "포르모테롤과 살부타몰은 모두 베타수용체 효능제 계열 약물로, 같은 계열 약물을 중복 복용하지 않아야 합니다."
       }
     ],
     "expected": [
@@ -655,7 +654,7 @@
     "id": 23,
     "name": "효능군중복 - 팔리페리돈 + 리스페리돈 (항정신병)",
     "method": "vanilla-rag",
-    "elapsed": 1846,
+    "elapsed": 2721,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -666,7 +665,7 @@
           "팔리페리돈",
           "리스페리돈"
         ],
-        "reason": "두 성분 모두 임부금기이며, 임신 3기에 투여 시 신생아에게 추체외로 장애 및 금단 증상의 위험이 증가할 수 있음."
+        "reason": "두 성분 모두 임부금기 성분으로, 임신 3기에 투여 시 신생아에서 추체외로장애와 금단증상의 위험 가능성이 있으며, 동물실험에서 태자 사망 증가와 생식 능력 감소가 보고됨."
       }
     ],
     "expected": [
@@ -684,18 +683,18 @@
     "id": 24,
     "name": "효능군중복 - 쿠에티아핀 + 올란자핀 (항정신병)",
     "method": "vanilla-rag",
-    "elapsed": 2578,
+    "elapsed": 5029,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
       {
         "type": "PREGNANCY",
-        "severity": "CRITICAL",
+        "severity": "HIGH",
         "involvedIngredients": [
           "쿠에티아핀",
           "올란자핀"
         ],
-        "reason": "임신 3기에 투여 시 신생아에서 추체외로장애 및 금단증상 발생 보고"
+        "reason": "임신 3기에 투여시 신생아에서 추체외로장애 및 금단증상 보고"
       },
       {
         "type": "DUPLICATE",
@@ -704,7 +703,7 @@
           "쿠에티아핀",
           "올란자핀"
         ],
-        "reason": "두 성분 모두 항정신병제 계열 약물로 중복 복용 시 위험"
+        "reason": "같은 항정신병제 계열 약물을 중복 복용하지 마세요."
       }
     ],
     "expected": [
@@ -722,7 +721,7 @@
     "id": 25,
     "name": "효능군중복 - 글리메피리드 + 글리클라지드 (설포닐우레아)",
     "method": "vanilla-rag",
-    "elapsed": 1981,
+    "elapsed": 4468,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -732,7 +731,7 @@
         "involvedIngredients": [
           "글리메피리드"
         ],
-        "reason": "글리메피리드는 임부금기 성분으로, 동물실험에서 고용량 투여시 골격기형이 보고되었음."
+        "reason": "글리메피리드는 임부금기 성분이며, 동물실험에서 고용량 투여시 상완골의 단축, 비후, 굴곡의 골격기형이 보고되었다."
       }
     ],
     "expected": [
@@ -750,18 +749,18 @@
     "id": 26,
     "name": "효능군중복 - 베라파밀 + 딜티아젬 (CCB)",
     "method": "vanilla-rag",
-    "elapsed": 1264,
+    "elapsed": 2181,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
       {
         "type": "DUPLICATE",
-        "severity": "HIGH",
+        "severity": "MEDIUM",
         "involvedIngredients": [
           "베라파밀",
           "딜티아젬"
         ],
-        "reason": "같은 계열 약물을 중복 복용하지 마세요."
+        "reason": "베라파밀은 CCB:non-Dihydro pyridines 계열 약물로, 같은 계열 약물을 중복 복용하지 말아야 합니다."
       }
     ],
     "expected": [
@@ -779,7 +778,7 @@
     "id": 27,
     "name": "임부금기 1등급 - 로수바스타틴",
     "method": "vanilla-rag",
-    "elapsed": 3715,
+    "elapsed": 9265,
     "detectedCount": 3,
     "expectedCount": 1,
     "detected": [
@@ -789,7 +788,7 @@
         "involvedIngredients": [
           "로수바스타틴"
         ],
-        "reason": "로수바스타틴은 임부금기 성분으로, 1등급 임부에게 레닌-안지오텐신계에 직접 작용하는 약물 투여 시 태아 및 신생아에게 심각한 손상 및 사망을 초래할 수 있다."
+        "reason": "로수바스타틴은 임부금기 성분으로, 임신 2, 3기 임부에게 RAAS에 직접 작용하는 약물 투여 시 태아 및 신생아에게 손상 및 사망을 유발할 수 있음."
       },
       {
         "type": "CONTRAINDICATED",
@@ -798,7 +797,7 @@
           "로수바스타틴",
           "사이클로스포린"
         ],
-        "reason": "로수바스타틴과 사이클로스포린을 함께 복용하면 혈중농도 상승 및 근육병증/횡문근융해증 위험성이 증가한다."
+        "reason": "로수바스타틴과 사이클로스포린을 함께 복용하면 근육병증 및 횡문근융해증의 위험이 증가할 수 있음."
       },
       {
         "type": "CONTRAINDICATED",
@@ -807,7 +806,7 @@
           "로수바스타틴",
           "로피나비르"
         ],
-        "reason": "로수바스타틴과 로피나비르를 함께 복용하면 횡문근융해증/근육병증 및 이에 수반되는 급격한 신기능 악화를 유발할 수 있다."
+        "reason": "로수바스타틴과 로피나비르를 함께 복용하면 횡문근융해증/근육병증 및 신기능 악화의 위험이 증가할 수 있음."
       }
     ],
     "expected": [
@@ -824,7 +823,7 @@
     "id": 28,
     "name": "임부금기 1등급 - 프라바스타틴",
     "method": "vanilla-rag",
-    "elapsed": 1455,
+    "elapsed": 3314,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -834,7 +833,7 @@
         "involvedIngredients": [
           "프라바스타틴"
         ],
-        "reason": "프라바스타틴은 임부금기 성분으로, 태아에게 심각한 영향을 미칠 수 있음."
+        "reason": "프라바스타틴은 임부금기 성분으로, 태아발육에 필수적인 콜레스테롤의 생합성을 감소시켜 심각한 영향을 미칠 수 있음."
       }
     ],
     "expected": [
@@ -851,7 +850,7 @@
     "id": 29,
     "name": "임부금기 1등급 - 플루바스타틴",
     "method": "vanilla-rag",
-    "elapsed": 3390,
+    "elapsed": 4820,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -861,16 +860,16 @@
         "involvedIngredients": [
           "플루바스타틴"
         ],
-        "reason": "플루바스타틴은 임부금기 성분이며, 임신 중 사용 시 태자 및 신생아에게 심각한 손상을 초래할 수 있음."
+        "reason": "플루바스타틴은 임부금기 성분이며, 임신 중 안전성이 미확립되어 있고, 동물실험에서 태자 및 신생아 사망이 보고되었기 때문."
       },
       {
         "type": "CONTRAINDICATED",
-        "severity": "CRITICAL",
+        "severity": "HIGH",
         "involvedIngredients": [
           "플루바스타틴",
           "푸시딘산"
         ],
-        "reason": "플루바스타틴과 푸시딘산을 함께 복용하면 횡문근융해증, 근무력증, 동통 발생 가능."
+        "reason": "플루바스타틴과 푸시딘산을 함께 복용하면 횡문근융해증, 근무력증, 동통이 발생할 가능성이 있기 때문."
       }
     ],
     "expected": [
@@ -887,7 +886,7 @@
     "id": 30,
     "name": "임부금기 1등급 - 피타바스타틴",
     "method": "vanilla-rag",
-    "elapsed": 2524,
+    "elapsed": 3797,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -897,7 +896,7 @@
         "involvedIngredients": [
           "피타바스타틴"
         ],
-        "reason": "피타바스타틴은 임부금기 성분이며, 1등급 레닌-안지오텐신-알도스테론계(RAAS)에 직접 작용하는 약물들과 함께 복용할 경우 태아 및 신생아에게 손상 및 사망을 유발할 수 있음."
+        "reason": "피타바스타틴은 임부금기 성분으로, 1등급 레닌-안지오텐신-알도스테론계(RAAS)에 직접 작용하는 약물과의 병용 시 태아 및 신생아에게 심각한 손상 및 사망을 초래할 수 있다."
       },
       {
         "type": "CONTRAINDICATED",
@@ -906,7 +905,7 @@
           "피타바스타틴",
           "사이클로스포린"
         ],
-        "reason": "피타바스타틴과 사이클로스포린을 함께 복용하면 혈중농도 상승 및 근육병증/횡문근융해증 위험성이 증가함."
+        "reason": "피타바스타틴과 사이클로스포린을 함께 복용하면 혈중농도가 상승하고 근육병증/횡문근융해증의 위험이 증가한다."
       }
     ],
     "expected": [
@@ -923,7 +922,7 @@
     "id": 31,
     "name": "임부금기 1등급 - 플루오로우라실",
     "method": "vanilla-rag",
-    "elapsed": 2235,
+    "elapsed": 2868,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -933,7 +932,7 @@
         "involvedIngredients": [
           "플루오로우라실"
         ],
-        "reason": "플루오로우라실은 임부금기 성분으로, 1등급 동물실험에서 다지증, 구개열 등 기형유발 작용이 보고되었습니다."
+        "reason": "플루오로우라실은 임부금기 성분으로, 기형유발 작용이 보고되었기 때문입니다."
       }
     ],
     "expected": [
@@ -950,8 +949,8 @@
     "id": 32,
     "name": "임부금기 1등급 - 에티닐에스트라디올",
     "method": "vanilla-rag",
-    "elapsed": 2478,
-    "detectedCount": 1,
+    "elapsed": 7487,
+    "detectedCount": 4,
     "expectedCount": 1,
     "detected": [
       {
@@ -961,7 +960,34 @@
           "에티닐에스트라디올",
           "옴비타스비르"
         ],
-        "reason": "ALT 수치 상승이 정상최고치(ULN) 대비 5배 이상 나오는 빈도가 유의적으로 높게 나타나며, 20배 이상 높아지는 경우도 있음."
+        "reason": "ALT 수치 상승이 정상최고치(ULN) 대비 5배 이상 나오는 빈도가 유의적으로 높게 나타남"
+      },
+      {
+        "type": "CONTRAINDICATED",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "에티닐에스트라디올",
+          "옴비타스비르"
+        ],
+        "reason": "ALT 수치 상승이 정상최고치 (ULN) 대비 5배 이상 나오는 빈도가 유의적으로 높게 나타남"
+      },
+      {
+        "type": "CONTRAINDICATED",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "에티닐에스트라디올",
+          "옴비타스비르"
+        ],
+        "reason": "ALT 수치 상승이 정상최고치 (ULN) 대비 5배 이상 나오는 빈도가 유의적으로 높게 나타남"
+      },
+      {
+        "type": "CONTRAINDICATED",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "에티닐에스트라디올",
+          "옴비타스비르"
+        ],
+        "reason": "ALT 수치 상승이 정상치 상한 기준보다 20배 이상 높게 나타나는 데 영향이 있음"
       }
     ],
     "expected": [
@@ -978,7 +1004,7 @@
     "id": 33,
     "name": "투여기간주의 - 나프록센 초과",
     "method": "vanilla-rag",
-    "elapsed": 1805,
+    "elapsed": 3626,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -986,9 +1012,9 @@
         "type": "PREGNANCY",
         "severity": "CRITICAL",
         "involvedIngredients": [
-          "나프록센"
+          "Naproxen"
         ],
-        "reason": "나프록센은 임부금기 성분으로, 임신 말기에 투여시 태아의 동맥관조기폐쇄 가능성이 있으며, 동물실험에서 난산발생빈도 증가, 분만지연, 태아 생존율 감소 등의 부작용이 보고됨."
+        "reason": "나프록센은 임부금기 성분으로, 임신 말기에 투여 시 태아의 동맥관조기폐쇄 가능성이 있으며, 동물실험에서 난산발생빈도 증가, 분만지연, 태아 생존율 감소가 보고됨."
       }
     ],
     "expected": [
@@ -1005,17 +1031,17 @@
     "id": 34,
     "name": "투여기간주의 - 졸피뎀 초과",
     "method": "vanilla-rag",
-    "elapsed": 3264,
+    "elapsed": 4377,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
       {
         "type": "PREGNANCY",
-        "severity": "CRITICAL",
+        "severity": "HIGH",
         "involvedIngredients": [
           "졸피뎀타르타르산염"
         ],
-        "reason": "임신 말기 또는 출산 동안의 투여 시 신생아에게 저체온증, 근육긴장저하 등의 위험이 있으며, 만성적인 투여 시 신생아 금단 증상 및 신체적 의존성의 위험이 있음."
+        "reason": "졸피뎀타르타르산염은 임부금기 성분이며, 임신 말기 또는 출산 동안 투여할 경우 신생아에게 저체온증, 근육긴장저하, 수유장애 등을 유발할 수 있음."
       }
     ],
     "expected": [
@@ -1032,7 +1058,7 @@
     "id": 35,
     "name": "투여기간주의 - 트리아졸람 초과",
     "method": "vanilla-rag",
-    "elapsed": 2517,
+    "elapsed": 4989,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -1042,7 +1068,7 @@
         "involvedIngredients": [
           "트리아졸람"
         ],
-        "reason": "트리아졸람은 임부금기 성분으로 신생아에게 심각한 부작용을 초래할 수 있다."
+        "reason": "트리아졸람은 임부금기 성분으로, 최기형성 사례와 신생아에게 여러 가지 심각한 부작용을 초래할 수 있음."
       }
     ],
     "expected": [
@@ -1059,7 +1085,7 @@
     "id": 36,
     "name": "투여기간주의 - 리네졸리드 초과",
     "method": "vanilla-rag",
-    "elapsed": 4524,
+    "elapsed": 3933,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -1067,10 +1093,10 @@
         "type": "CONTRAINDICATED",
         "severity": "CRITICAL",
         "involvedIngredients": [
-          "리네졸리드",
-          "셀레길린염산염"
+          "셀레길린염산염",
+          "리네졸리드"
         ],
-        "reason": "리네졸리드와 셀레길린염산염을 함께 복용하면 고혈압 위기의 위험이 증가하므로 금기입니다."
+        "reason": "셀레길린염산염과 리네졸리드를 함께 복용하면 고혈압 위기의 위험이 증가함."
       },
       {
         "type": "PREGNANCY",
@@ -1078,7 +1104,7 @@
         "involvedIngredients": [
           "리네졸리드"
         ],
-        "reason": "리네졸리드는 임부금기 성분으로, 임부에 대한 안전성이 미확립되어 있습니다."
+        "reason": "리네졸리드는 임부에 대한 안전성이 미확립된 성분임."
       }
     ],
     "expected": [
@@ -1095,7 +1121,7 @@
     "id": 37,
     "name": "투여기간주의 - 클로르페니라민 초과",
     "method": "vanilla-rag",
-    "elapsed": 1602,
+    "elapsed": 1000,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -1113,7 +1139,7 @@
     "id": 38,
     "name": "투여기간주의 - 옥시메타졸린 초과",
     "method": "vanilla-rag",
-    "elapsed": 959,
+    "elapsed": 636,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -1131,7 +1157,7 @@
     "id": 39,
     "name": "안전한 조합 - 비타민C + 오메가3",
     "method": "vanilla-rag",
-    "elapsed": 1685,
+    "elapsed": 1187,
     "detectedCount": 0,
     "expectedCount": 0,
     "detected": [],
@@ -1142,7 +1168,7 @@
     "id": 40,
     "name": "안전한 조합 - 단일 성분 (아세트아미노펜)",
     "method": "vanilla-rag",
-    "elapsed": 1287,
+    "elapsed": 1333,
     "detectedCount": 0,
     "expectedCount": 0,
     "detected": [],
@@ -1153,7 +1179,7 @@
     "id": 41,
     "name": "복합 - 병용금기 + 노인주의",
     "method": "vanilla-rag",
-    "elapsed": 1919,
+    "elapsed": 3176,
     "detectedCount": 1,
     "expectedCount": 2,
     "detected": [
@@ -1164,7 +1190,7 @@
           "디아제팜",
           "플루라제팜"
         ],
-        "reason": "임부금기 성분으로, 2등급 벤조디아제핀계 약물의 최기형성 사례 및 신생아 금단증상 등 심각한 위험이 보고됨."
+        "reason": "두 성분 모두 임부금기 성분으로, 2등급 벤조디아제핀계 약물의 최기형성 사례 보고. 신생아에게 포유곤란, 근긴장저하, 졸음, 황달 증가 및 금단증상 우려."
       }
     ],
     "expected": [
@@ -1187,7 +1213,7 @@
     "id": 42,
     "name": "복합 - 효능군중복 + 노인주의",
     "method": "vanilla-rag",
-    "elapsed": 2170,
+    "elapsed": 3297,
     "detectedCount": 1,
     "expectedCount": 3,
     "detected": [
@@ -1198,7 +1224,7 @@
           "아세클로페낙",
           "이부프로펜"
         ],
-        "reason": "두 성분 모두 임부금기 성분으로 임신 중 사용 시 태아에게 심각한 위험이 발생할 수 있으며, 특히 이부프로펜은 임신 3기에 사용 시 출산 지연, 신생아 출혈, 태아의 심폐독성 위험을 포함."
+        "reason": "두 성분 모두 임부금기이며, 특히 임신 말기에 사용 시 태아에 심각한 부작용(동맥관 조기폐쇄, 출산 지연 등)이 발생할 수 있음."
       }
     ],
     "expected": [
@@ -1228,7 +1254,7 @@
     "id": 43,
     "name": "복합 - 병용금기 + 효능군중복",
     "method": "vanilla-rag",
-    "elapsed": 1879,
+    "elapsed": 2356,
     "detectedCount": 1,
     "expectedCount": 2,
     "detected": [
@@ -1264,7 +1290,7 @@
     "id": 44,
     "name": "복합 - 임부금기 + 병용금기",
     "method": "vanilla-rag",
-    "elapsed": 3496,
+    "elapsed": 3584,
     "detectedCount": 2,
     "expectedCount": 2,
     "detected": [
@@ -1275,7 +1301,7 @@
           "이트라코나졸",
           "심바스타틴"
         ],
-        "reason": "심바스타틴과 이트라코나졸을 함께 복용하면 근육병증의 위험 증가 가능"
+        "reason": "심바스타틴과 이트라코나졸을 함께 복용하면 근육병증의 위험이 증가합니다."
       },
       {
         "type": "CONTRAINDICATED",
@@ -1284,7 +1310,7 @@
           "이트라코나졸",
           "아토르바스타틴"
         ],
-        "reason": "아토르바스타틴과 이트라코나졸을 함께 복용하면 근육병증, 횡문근융해증, 간효소 이상 발생 위험 증가"
+        "reason": "아토르바스타틴과 이트라코나졸을 함께 복용하면 근육병증, 횡문근융해증, 간효소 이상 발생 위험이 증가합니다."
       }
     ],
     "expected": [
@@ -1308,7 +1334,7 @@
     "id": 45,
     "name": "복합 - 다약제 (5개)",
     "method": "vanilla-rag",
-    "elapsed": 702,
+    "elapsed": 2313,
     "detectedCount": 0,
     "expectedCount": 3,
     "detected": [],
@@ -1340,7 +1366,7 @@
     "id": 46,
     "name": "투여기간주의 - 기간 안 넘은 경우 (정상)",
     "method": "vanilla-rag",
-    "elapsed": 2147,
+    "elapsed": 5744,
     "detectedCount": 1,
     "expectedCount": 0,
     "detected": [
@@ -1350,7 +1376,7 @@
         "involvedIngredients": [
           "나프록센"
         ],
-        "reason": "나프록센은 임부금기 성분으로, 임신 말기에 투여 시 태아의 동맥관조기폐쇄 가능성이 있으며, 동물실험에서 태아 생존율 감소 등의 부작용이 보고됨."
+        "reason": "나프록센은 임부금기 성분이며, 임신 말기에 투여시 태아의 동맥관조기폐쇄 가능성이 있고, 동물실험에서 난산발생빈도 증가, 분만지연, 태아 생존율 감소가 보고되었음."
       }
     ],
     "expected": [],
@@ -1360,7 +1386,7 @@
     "id": 47,
     "name": "투여기간주의 - 딱 맞는 경우 (정상)",
     "method": "vanilla-rag",
-    "elapsed": 1785,
+    "elapsed": 2286,
     "detectedCount": 1,
     "expectedCount": 0,
     "detected": [
@@ -1370,7 +1396,7 @@
         "involvedIngredients": [
           "트리아졸람"
         ],
-        "reason": "트리아졸람은 임부금기 성분으로 최기형성 사례와 신생아에게 심각한 부작용이 발생할 수 있음."
+        "reason": "트리아졸람은 임부금기로, 최기형성 사례 및 신생아의 다양한 합병증 발생 위험이 높음."
       }
     ],
     "expected": [],
@@ -1380,7 +1406,7 @@
     "id": 48,
     "name": "노인주의 - 피나제팜",
     "method": "vanilla-rag",
-    "elapsed": 1895,
+    "elapsed": 3372,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -1390,7 +1416,7 @@
         "involvedIngredients": [
           "피나제팜"
         ],
-        "reason": "피나제팜은 2등급 벤조디아제핀계 약물로, 최기형성 사례 및 신생아 금단증상이 보고되어 임부에 대한 안전성이 미확립되어 있음."
+        "reason": "피나제팜은 임부금기 성분으로, 최기형성 사례와 신생아 포유곤란, 근긴장저하, 졸음, 황달 증가 및 금단증상이 보고됨."
       }
     ],
     "expected": [
@@ -1407,7 +1433,7 @@
     "id": 49,
     "name": "효능군중복 - 독사조신 + 프라조신 (Alpha Blockers)",
     "method": "vanilla-rag",
-    "elapsed": 587,
+    "elapsed": 879,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -1426,7 +1452,7 @@
     "id": 50,
     "name": "복합 - 노인주의 + 임부금기 + 투여기간주의",
     "method": "vanilla-rag",
-    "elapsed": 2718,
+    "elapsed": 3283,
     "detectedCount": 1,
     "expectedCount": 3,
     "detected": [
@@ -1437,7 +1463,7 @@
           "트리아졸람",
           "클로나제팜"
         ],
-        "reason": "트리아졸람은 임부금기 성분으로, 신생아 금단증상 및 기형성 위험이 있으며, 클로나제팜 또한 임부에게 안전성 미확립으로 인한 위험이 존재할 수 있음."
+        "reason": "트리아졸람은 임부금기 성분으로, 신생아에게 여러 가지 심각한 기형과 증상을 유발할 수 있습니다."
       }
     ],
     "expected": [

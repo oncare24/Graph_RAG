@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>보살핌 — 복약 안전 분석</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0f1e; --surface: #111827; --surface2: #1a2236; --border: #1e2d45;
+      --accent: #3b82f6; --accent2: #06b6d4; --danger: #ef4444; --success: #10b981;
+      --medium: #8b5cf6; --text: #e2e8f0; --text-muted: #64748b;
+      --critical: #ef4444; --high: #f59e0b;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans KR', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    body::before {
+      content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 20% 20%, rgba(59,130,246,0.08) 0%, transparent 50%),
+                  radial-gradient(ellipse at 80% 80%, rgba(6,182,212,0.06) 0%, transparent 50%);
+      pointer-events: none; z-index: 0;
+    }
+    .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; position: relative; z-index: 1; }
+    header { text-align: center; margin-bottom: 48px; }
+    .logo { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .logo-icon { width: 48px; height: 48px; background: linear-gradient(135deg, var(--accent), var(--accent2)); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+    .logo-text { font-size: 28px; font-weight: 700; background: linear-gradient(135deg, #fff, var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .subtitle { color: var(--text-muted); font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; }
+    .tabs { display: flex; gap: 4px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 6px; margin-bottom: 32px; }
+    .tab { flex: 1; padding: 12px; border: none; background: transparent; color: var(--text-muted); border-radius: 10px; cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+    .tab.active { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; margin-bottom: 20px; }
+    .card-title { font-size: 13px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
+    .ingredient-input-wrap { display: flex; gap: 10px; margin-bottom: 12px; }
+    input[type="text"], input[type="number"], input[type="password"], select {
+      flex: 1; background: var(--surface2); border: 1px solid var(--border); border-radius: 10px;
+      padding: 12px 16px; color: var(--text); font-family: inherit; font-size: 14px; outline: none; transition: border-color 0.2s;
+    }
+    input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, select:focus { border-color: var(--accent); }
+    input::placeholder { color: var(--text-muted); }
+    select option { background: var(--surface2); }
+    .btn { padding: 12px 20px; border: none; border-radius: 10px; cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 600; transition: all 0.2s; }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: white; }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .btn-secondary { background: var(--surface2); color: var(--text-muted); border: 1px solid var(--border); }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; min-height: 40px; }
+    .tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); color: var(--accent2); border-radius: 8px; padding: 6px 12px; font-size: 13px; font-family: 'DM Mono', monospace; }
+    .tag button { background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 16px; line-height: 1; padding: 0; }
+    .tag button:hover { color: var(--danger); }
+    .analyze-btn { width: 100%; padding: 16px; font-size: 15px; border-radius: 12px; margin-top: 8px; }
+    .loading { display: none; text-align: center; padding: 40px; color: var(--text-muted); }
+    .loading.show { display: block; }
+    .spinner { width: 40px; height: 40px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 16px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .warnings { display: none; }
+    .warnings.show { display: block; }
+    .warning-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+    .warning-count { font-size: 13px; color: var(--text-muted); }
+    .warning-card { background: var(--surface2); border-radius: 12px; padding: 20px; margin-bottom: 12px; border-left: 3px solid var(--border); animation: slideIn 0.3s ease; }
+    @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .warning-card.CRITICAL { border-left-color: var(--critical); }
+    .warning-card.HIGH { border-left-color: var(--high); }
+    .warning-card.MEDIUM { border-left-color: var(--medium); }
+    .warning-top { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .badge { padding: 3px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; font-family: 'DM Mono', monospace; text-transform: uppercase; letter-spacing: 0.05em; }
+    .badge.CONTRAINDICATED { background: rgba(239,68,68,0.15); color: var(--critical); }
+    .badge.ELDERLY { background: rgba(245,158,11,0.15); color: var(--high); }
+    .badge.DUPLICATE { background: rgba(139,92,246,0.15); color: var(--medium); }
+    .badge.PREGNANCY { background: rgba(236,72,153,0.15); color: #ec4899; }
+    .badge.OVERDOSE { background: rgba(239,68,68,0.15); color: var(--critical); }
+    .badge.DURATION { background: rgba(245,158,11,0.15); color: var(--high); }
+    .severity-badge { padding: 3px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; }
+    .severity-badge.CRITICAL { background: rgba(239,68,68,0.1); color: var(--critical); border: 1px solid rgba(239,68,68,0.2); }
+    .severity-badge.HIGH { background: rgba(245,158,11,0.1); color: var(--high); border: 1px solid rgba(245,158,11,0.2); }
+    .severity-badge.MEDIUM { background: rgba(139,92,246,0.1); color: var(--medium); border: 1px solid rgba(139,92,246,0.2); }
+    .involved { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+    .ingredient-tag { background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 6px; padding: 3px 10px; font-size: 12px; font-family: 'DM Mono', monospace; color: var(--text-muted); }
+    .warning-message { font-size: 14px; color: var(--text); line-height: 1.6; padding: 12px; background: rgba(255,255,255,0.03); border-radius: 8px; }
+    .safe-message { display: none; text-align: center; padding: 40px; color: var(--success); }
+    .safe-message.show { display: block; }
+    .safe-icon { font-size: 48px; margin-bottom: 12px; }
+    .step { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
+    .step-num { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent2)); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+    .step-content { flex: 1; }
+    .step-title { font-size: 14px; font-weight: 600; margin-bottom: 10px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-label { font-size: 12px; color: var(--text-muted); }
+    .jti-display { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent2); word-break: break-all; display: none; }
+    .jti-display.show { display: block; }
+    .status-msg { padding: 12px 16px; border-radius: 10px; font-size: 13px; margin-top: 12px; display: none; }
+    .status-msg.show { display: block; }
+    .status-msg.info { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); color: var(--accent2); }
+    .status-msg.success { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); color: var(--success); }
+    .status-msg.error { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.2); color: var(--danger); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .prescription-section { margin-top: 20px; }
+    .prescription-card { background: var(--surface2); border-radius: 10px; padding: 14px 16px; margin-bottom: 8px; border: 1px solid var(--border); }
+    .prescription-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .prescription-info { font-size: 12px; color: var(--text-muted); display: flex; flex-wrap: wrap; gap: 8px; }
+    .prescription-info span { background: rgba(255,255,255,0.04); border-radius: 4px; padding: 2px 8px; }
+    .user-info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">
+      <div class="logo-icon">💊</div>
+      <span class="logo-text">보살핌</span>
+    </div>
+    <p class="subtitle">Graph RAG 기반 복약 안전 분석 시스템</p>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('direct')">⚗️ 성분 직접 입력</button>
+    <button class="tab" onclick="switchTab('codef')">📋 처방전 자동 조회</button>
+  </div>
+
+  <!-- 직접 입력 탭 -->
+  <div class="tab-panel active" id="tab-direct">
+    <div class="card">
+      <div class="card-title">복용 중인 약물 성분 입력</div>
+      <div class="ingredient-input-wrap">
+        <input type="text" id="ingredientInput" placeholder="성분명 입력 (예: 아스피린)" onkeydown="handleKey(event)">
+        <button class="btn btn-secondary" onclick="addIngredient()">추가</button>
+      </div>
+      <div class="tags" id="tags"></div>
+      <div class="user-info-row">
+        <div class="form-group">
+          <label class="form-label">만 나이</label>
+          <input type="number" id="userAge" placeholder="예: 75" min="0" max="120">
+        </div>
+        <div class="form-group">
+          <label class="form-label">임신 여부</label>
+          <select id="isPregnant">
+            <option value="false">아니오</option>
+            <option value="true">예</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary analyze-btn" onclick="analyze()" id="analyzeBtn">🔍 복약 안전 분석하기</button>
+    <div class="loading" id="loading"><div class="spinner"></div><p>Graph RAG로 분석 중...</p></div>
+    <div class="warnings" id="warnings">
+      <div class="warning-header">
+        <div class="card-title" style="margin:0">분석 결과</div>
+        <span class="warning-count" id="warningCount"></span>
+      </div>
+      <div id="warningList"></div>
+    </div>
+    <div class="safe-message" id="safeMessage">
+      <div class="safe-icon">✅</div>
+      <p style="font-size:16px;font-weight:600;margin-bottom:8px">위험 요소가 없습니다</p>
+      <p style="color:var(--text-muted);font-size:14px">입력하신 약물 조합에서 위험한 상호작용이 발견되지 않았습니다.</p>
+    </div>
+  </div>
+
+  <!-- CODEF 탭 -->
+  <div class="tab-panel" id="tab-codef">
+    <div class="card">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">본인 정보 입력</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">이름</label>
+              <input type="text" id="userName" placeholder="홍길동">
+            </div>
+            <div class="form-group">
+              <label class="form-label">주민번호 (13자리)</label>
+              <input type="password" id="identity" placeholder="주민번호 13자리 숫자만" maxlength="13">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">휴대폰 번호</label>
+              <input type="text" id="phoneNo" placeholder="01012345678">
+            </div>
+            <div class="form-group">
+              <label class="form-label">만 나이</label>
+              <input type="number" id="codefAge" placeholder="예: 75" min="0" max="120">
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom:12px">
+            <label class="form-label">임신 여부</label>
+            <select id="codefIsPregnant">
+              <option value="false">아니오</option>
+              <option value="true">예</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" style="width:100%;margin-top:4px" onclick="requestCodef()" id="requestBtn">📱 카카오톡 인증 요청</button>
+          <div class="status-msg" id="authMsg"></div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">카카오톡 인증 수락 후 분석</div>
+          <div class="jti-display" id="jtiDisplay"></div>
+          <button class="btn btn-primary" style="width:100%;margin-top:12px" onclick="confirmCodef()" id="confirmBtn" disabled>✅ 인증 완료 → 처방전 분석</button>
+        </div>
+      </div>
+    </div>
+    <div class="loading" id="codefLoading"><div class="spinner"></div><p>처방전 조회 및 분석 중...</p></div>
+
+    <!-- 처방전 목록 -->
+    <div class="prescription-section" id="prescriptionSection" style="display:none">
+      <div class="card-title">📋 조회된 처방전</div>
+      <div id="prescriptionList"></div>
+    </div>
+
+    <!-- 경고 -->
+    <div class="warnings" id="codefWarnings">
+      <div class="warning-header">
+        <div class="card-title" style="margin:0">복약 분석 결과</div>
+        <span class="warning-count" id="codefWarningCount"></span>
+      </div>
+      <div id="codefWarningList"></div>
+    </div>
+    <div class="safe-message" id="codefSafeMessage">
+      <div class="safe-icon">✅</div>
+      <p style="font-size:16px;font-weight:600;margin-bottom:8px">위험 요소가 없습니다</p>
+      <p style="color:var(--text-muted);font-size:14px">현재 복용 중인 약물에서 위험한 상호작용이 발견되지 않았습니다.</p>
+    </div>
+    <div class="safe-message" id="noPrescriptionMessage">
+      <div class="safe-icon">📭</div>
+      <p style="font-size:16px;font-weight:600;margin-bottom:8px">처방 기록이 없습니다</p>
+      <p style="color:var(--text-muted);font-size:14px">조회된 처방 기록이 없습니다.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+const API = 'http://localhost:3000';
+const ingredients = [];
+let jtiData = null;
+let codefFormData = null;
+
+const TYPE_LABEL = {
+  CONTRAINDICATED: '병용금기', ELDERLY: '노인주의', DUPLICATE: '효능군중복',
+  PREGNANCY: '임부금기', OVERDOSE: '용량주의', DURATION: '투여기간주의',
+};
+
+function switchTab(tab) {
+  document.querySelectorAll('.tab').forEach((t, i) => t.classList.toggle('active', (i===0)===(tab==='direct')));
+  document.getElementById('tab-direct').classList.toggle('active', tab==='direct');
+  document.getElementById('tab-codef').classList.toggle('active', tab==='codef');
+}
+
+function addIngredient() {
+  const input = document.getElementById('ingredientInput');
+  const val = input.value.trim();
+  if (!val || ingredients.includes(val)) { input.value=''; return; }
+  ingredients.push(val); renderTags(); input.value=''; input.focus();
+}
+
+function handleKey(e) { if (e.key==='Enter') addIngredient(); }
+function removeIngredient(idx) { ingredients.splice(idx,1); renderTags(); }
+function renderTags() {
+  document.getElementById('tags').innerHTML = ingredients.map((ing,i) =>
+    `<span class="tag">${ing}<button onclick="removeIngredient(${i})">×</button></span>`).join('');
+}
+
+function renderWarnings(warnings, listId, countId, warningsId, safeId) {
+  const warningsEl = document.getElementById(warningsId);
+  const safeEl = document.getElementById(safeId);
+  if (warnings.length===0) { warningsEl.classList.remove('show'); safeEl.classList.add('show'); return; }
+  safeEl.classList.remove('show'); warningsEl.classList.add('show');
+  document.getElementById(countId).textContent = `총 ${warnings.length}개 경고`;
+  document.getElementById(listId).innerHTML = warnings.map(w => `
+    <div class="warning-card ${w.severity}">
+      <div class="warning-top">
+        <span class="badge ${w.type}">${TYPE_LABEL[w.type]??w.type}</span>
+        <span class="severity-badge ${w.severity}">${w.severity}</span>
+      </div>
+      <div class="involved">${w.involvedIngredients.map(i=>`<span class="ingredient-tag">${i}</span>`).join('')}</div>
+      <div class="warning-message">${w.explanation??w.rawMessage}</div>
+    </div>`).join('');
+}
+
+function renderPrescriptions(prescriptions) {
+  const section = document.getElementById('prescriptionSection');
+  const list = document.getElementById('prescriptionList');
+  if (!prescriptions || prescriptions.length === 0) { section.style.display='none'; return; }
+  section.style.display = 'block';
+  list.innerHTML = prescriptions.map(p => `
+    <div class="prescription-card">
+      <div class="prescription-name">💊 ${p.resDrugName}</div>
+      <div class="prescription-info">
+        ${p.resIngredients ? `<span>성분: ${p.resIngredients}</span>` : ''}
+        ${p.resPrescribeDrugEffect ? `<span>효능: ${p.resPrescribeDrugEffect}</span>` : ''}
+        ${p.resContent ? `<span>함량: ${p.resContent}</span>` : ''}
+        ${p.resOneDose ? `<span>1회 ${p.resOneDose}정</span>` : ''}
+        ${p.resDailyDosesNumber ? `<span>하루 ${p.resDailyDosesNumber}회</span>` : ''}
+        ${p.resTotalDosingdays ? `<span>${p.resTotalDosingdays}일치</span>` : ''}
+        ${p.resPrescribeOrg ? `<span>🏥 ${p.resPrescribeOrg}</span>` : ''}
+      </div>
+    </div>`).join('');
+}
+
+async function analyze() {
+  if (ingredients.length===0) { alert('성분을 입력해주세요.'); return; }
+  const age = parseInt(document.getElementById('userAge').value) || undefined;
+  const isPregnant = document.getElementById('isPregnant').value === 'true';
+  const btn=document.getElementById('analyzeBtn');
+  const loading=document.getElementById('loading');
+  btn.disabled=true; loading.classList.add('show');
+  document.getElementById('warnings').classList.remove('show');
+  document.getElementById('safeMessage').classList.remove('show');
+  try {
+    const res = await fetch(`${API}/drug/analyze`, {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        drugs: [{ drugName: '분석', ingredients }],
+        age,
+        isPregnant,
+      })
+    });
+    renderWarnings(await res.json(),'warningList','warningCount','warnings','safeMessage');
+  } catch(e) { alert('서버 연결 실패. 서버가 실행 중인지 확인해주세요.'); }
+  finally { btn.disabled=false; loading.classList.remove('show'); }
+}
+
+async function requestCodef() {
+  const userName=document.getElementById('userName').value.trim();
+  const identity=document.getElementById('identity').value.trim();
+  const phoneNo=document.getElementById('phoneNo').value.trim();
+  if (!userName||!identity||!phoneNo) { alert('이름, 주민번호, 전화번호를 입력해주세요.'); return; }
+
+  const age = parseInt(document.getElementById('codefAge').value) || undefined;
+  const isPregnant = document.getElementById('codefIsPregnant').value === 'true';
+  codefFormData = { userName, identity, phoneNo, age, isPregnant };
+
+  const btn=document.getElementById('requestBtn');
+  const msg=document.getElementById('authMsg');
+  btn.disabled=true; btn.textContent='요청 중...';
+  try {
+    const res=await fetch(`${API}/drug/codef/request`,{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({ userName, identity, phoneNo })
+    });
+    const data=await res.json();
+    if (data.jti) {
+      jtiData=data;
+      document.getElementById('jtiDisplay').textContent=`Transaction ID: ${data.transactionId}`;
+      document.getElementById('jtiDisplay').classList.add('show');
+      document.getElementById('confirmBtn').disabled=false;
+      msg.textContent='📱 카카오톡으로 인증 요청이 발송됐습니다. 수락 후 아래 버튼을 눌러주세요.';
+      msg.className='status-msg info show';
+    } else {
+      msg.textContent=data.message??'인증 요청 실패';
+      msg.className='status-msg error show';
+    }
+  } catch(e) { msg.textContent='서버 연결 실패'; msg.className='status-msg error show'; }
+  finally { btn.disabled=false; btn.textContent='📱 카카오톡 인증 요청'; }
+}
+
+async function confirmCodef() {
+  if (!jtiData||!codefFormData) return;
+  const loading=document.getElementById('codefLoading');
+  const btn=document.getElementById('confirmBtn');
+  btn.disabled=true; loading.classList.add('show');
+  document.getElementById('codefWarnings').classList.remove('show');
+  document.getElementById('codefSafeMessage').classList.remove('show');
+  document.getElementById('noPrescriptionMessage').classList.remove('show');
+  document.getElementById('prescriptionSection').style.display='none';
+
+  try {
+    const res=await fetch(`${API}/drug/codef/confirm`,{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        ...codefFormData,
+        jti:jtiData.jti,
+        twoWayTimestamp:jtiData.twoWayTimestamp,
+        age: codefFormData.age,
+        isPregnant: codefFormData.isPregnant,
+      })
+    });
+    const data=await res.json();
+
+    // 처방 기록 없음
+    if (data.message === '처방 기록이 없습니다.') {
+      document.getElementById('noPrescriptionMessage').classList.add('show');
+      document.getElementById('authMsg').textContent='📭 처방 기록이 없습니다.';
+      document.getElementById('authMsg').className='status-msg info show';
+      return;
+    }
+
+    // 처방전 목록 렌더링
+    if (data.prescriptions) {
+      renderPrescriptions(data.prescriptions);
+    }
+
+    // 경고 렌더링
+    if (Array.isArray(data.warnings)) {
+      renderWarnings(data.warnings,'codefWarningList','codefWarningCount','codefWarnings','codefSafeMessage');
+      document.getElementById('authMsg').textContent='✅ 처방전 분석 완료';
+      document.getElementById('authMsg').className='status-msg success show';
+    } else {
+      document.getElementById('authMsg').textContent=data.message??'분석 실패';
+      document.getElementById('authMsg').className='status-msg error show';
+    }
+  } catch(e) {
+    document.getElementById('authMsg').textContent='서버 연결 실패';
+    document.getElementById('authMsg').className='status-msg error show';
+  } finally { loading.classList.remove('show'); btn.disabled=false; }
+}
+</script>
+</body>
+</html>

@@ -3,7 +3,7 @@
     "id": 1,
     "name": "병용금기 - 이트라코나졸 + 심바스타틴",
     "method": "graph-rag",
-    "elapsed": 4301,
+    "elapsed": 3593,
     "detectedCount": 4,
     "expectedCount": 1,
     "detected": [
@@ -49,7 +49,7 @@
     "id": 2,
     "name": "병용금기 - 메트포르민 + 이오딕사놀",
     "method": "graph-rag",
-    "elapsed": 3282,
+    "elapsed": 2958,
     "detectedCount": 4,
     "expectedCount": 1,
     "detected": [
@@ -95,7 +95,7 @@
     "id": 3,
     "name": "병용금기 - 메트포르민 + 이오트로란",
     "method": "graph-rag",
-    "elapsed": 2748,
+    "elapsed": 2238,
     "detectedCount": 3,
     "expectedCount": 1,
     "detected": [
@@ -135,7 +135,7 @@
     "id": 4,
     "name": "병용금기 - 메토트렉세이트 + 티아프로펜산",
     "method": "graph-rag",
-    "elapsed": 3929,
+    "elapsed": 2732,
     "detectedCount": 4,
     "expectedCount": 1,
     "detected": [
@@ -180,7 +180,7 @@
     "id": 5,
     "name": "병용금기 - 포르모테롤 + 노르에피네프린",
     "method": "graph-rag",
-    "elapsed": 2722,
+    "elapsed": 3626,
     "detectedCount": 3,
     "expectedCount": 1,
     "detected": [
@@ -219,7 +219,7 @@
     "id": 6,
     "name": "병용금기 - 포르모테롤 + 에피네프린",
     "method": "graph-rag",
-    "elapsed": 2747,
+    "elapsed": 2792,
     "detectedCount": 3,
     "expectedCount": 1,
     "detected": [
@@ -258,7 +258,7 @@
     "id": 7,
     "name": "병용금기 - 덱사메타손 + 스파플록사신",
     "method": "graph-rag",
-    "elapsed": 2840,
+    "elapsed": 2471,
     "detectedCount": 3,
     "expectedCount": 1,
     "detected": [
@@ -297,7 +297,7 @@
     "id": 8,
     "name": "병용금기 - 히드로코르티손 + 스파플록사신",
     "method": "graph-rag",
-    "elapsed": 3895,
+    "elapsed": 2944,
     "detectedCount": 3,
     "expectedCount": 1,
     "detected": [
@@ -336,7 +336,7 @@
     "id": 9,
     "name": "병용금기 - 프레드니솔론 + 스파플록사신",
     "method": "graph-rag",
-    "elapsed": 3831,
+    "elapsed": 2596,
     "detectedCount": 3,
     "expectedCount": 1,
     "detected": [
@@ -375,7 +375,7 @@
     "id": 10,
     "name": "병용금기 - 헥소프레날린 + 노르에피네프린",
     "method": "graph-rag",
-    "elapsed": 1906,
+    "elapsed": 3074,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -408,7 +408,7 @@
     "id": 11,
     "name": "노인주의 - 플루라제팜",
     "method": "graph-rag",
-    "elapsed": 3084,
+    "elapsed": 2307,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -439,7 +439,7 @@
     "id": 12,
     "name": "노인주의 - 디아제팜",
     "method": "graph-rag",
-    "elapsed": 2452,
+    "elapsed": 2545,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -470,7 +470,7 @@
     "id": 13,
     "name": "노인주의 - 클로르디아제폭시드",
     "method": "graph-rag",
-    "elapsed": 2716,
+    "elapsed": 2768,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -501,7 +501,7 @@
     "id": 14,
     "name": "노인주의 - 클로나제팜",
     "method": "graph-rag",
-    "elapsed": 2841,
+    "elapsed": 2354,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -532,7 +532,7 @@
     "id": 15,
     "name": "노인주의 - 몰린돈",
     "method": "graph-rag",
-    "elapsed": 2550,
+    "elapsed": 2090,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -563,7 +563,7 @@
     "id": 16,
     "name": "노인주의 - 플루니트라제팜",
     "method": "graph-rag",
-    "elapsed": 2892,
+    "elapsed": 1598,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -594,7 +594,7 @@
     "id": 17,
     "name": "노인주의 - 클로바잠",
     "method": "graph-rag",
-    "elapsed": 2507,
+    "elapsed": 2081,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -625,7 +625,7 @@
     "id": 18,
     "name": "노인주의 - 멕사졸람",
     "method": "graph-rag",
-    "elapsed": 1979,
+    "elapsed": 2146,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -656,7 +656,7 @@
     "id": 19,
     "name": "효능군중복 - 아스피린 + 이부프로펜 (소염제)",
     "method": "graph-rag",
-    "elapsed": 4338,
+    "elapsed": 5409,
     "detectedCount": 5,
     "expectedCount": 1,
     "detected": [
@@ -707,7 +707,7 @@
     "id": 20,
     "name": "효능군중복 - 아세클로페낙 + 나프록센 (소염제)",
     "method": "graph-rag",
-    "elapsed": 8405,
+    "elapsed": 4680,
     "detectedCount": 5,
     "expectedCount": 1,
     "detected": [
@@ -758,7 +758,7 @@
     "id": 21,
     "name": "효능군중복 - 세레콕시브 + 디클로페낙 (소염제)",
     "method": "graph-rag",
-    "elapsed": 5850,
+    "elapsed": 5095,
     "detectedCount": 5,
     "expectedCount": 1,
     "detected": [
@@ -809,7 +809,7 @@
     "id": 22,
     "name": "효능군중복 - 포르모테롤 + 살부타몰 (베타수용체)",
     "method": "graph-rag",
-    "elapsed": 3427,
+    "elapsed": 3074,
     "detectedCount": 3,
     "expectedCount": 1,
     "detected": [
@@ -848,7 +848,7 @@
     "id": 23,
     "name": "효능군중복 - 팔리페리돈 + 리스페리돈 (항정신병)",
     "method": "graph-rag",
-    "elapsed": 4751,
+    "elapsed": 4163,
     "detectedCount": 5,
     "expectedCount": 1,
     "detected": [
@@ -899,7 +899,7 @@
     "id": 24,
     "name": "효능군중복 - 쿠에티아핀 + 올란자핀 (항정신병)",
     "method": "graph-rag",
-    "elapsed": 4955,
+    "elapsed": 6508,
     "detectedCount": 5,
     "expectedCount": 1,
     "detected": [
@@ -950,7 +950,7 @@
     "id": 25,
     "name": "효능군중복 - 글리메피리드 + 글리클라지드 (설포닐우레아)",
     "method": "graph-rag",
-    "elapsed": 2997,
+    "elapsed": 2637,
     "detectedCount": 3,
     "expectedCount": 1,
     "detected": [
@@ -989,7 +989,7 @@
     "id": 26,
     "name": "효능군중복 - 베라파밀 + 딜티아젬 (CCB)",
     "method": "graph-rag",
-    "elapsed": 3371,
+    "elapsed": 4206,
     "detectedCount": 3,
     "expectedCount": 1,
     "detected": [
@@ -1028,7 +1028,7 @@
     "id": 27,
     "name": "임부금기 1등급 - 로수바스타틴",
     "method": "graph-rag",
-    "elapsed": 6294,
+    "elapsed": 1243,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -1053,7 +1053,7 @@
     "id": 28,
     "name": "임부금기 1등급 - 프라바스타틴",
     "method": "graph-rag",
-    "elapsed": 3989,
+    "elapsed": 1179,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -1078,7 +1078,7 @@
     "id": 29,
     "name": "임부금기 1등급 - 플루바스타틴",
     "method": "graph-rag",
-    "elapsed": 10083,
+    "elapsed": 1453,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -1103,7 +1103,7 @@
     "id": 30,
     "name": "임부금기 1등급 - 피타바스타틴",
     "method": "graph-rag",
-    "elapsed": 906,
+    "elapsed": 1253,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -1128,7 +1128,7 @@
     "id": 31,
     "name": "임부금기 1등급 - 플루오로우라실",
     "method": "graph-rag",
-    "elapsed": 1438,
+    "elapsed": 1141,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -1153,7 +1153,7 @@
     "id": 32,
     "name": "임부금기 1등급 - 에티닐에스트라디올",
     "method": "graph-rag",
-    "elapsed": 1525,
+    "elapsed": 2491,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -1178,7 +1178,7 @@
     "id": 33,
     "name": "투여기간주의 - 나프록센 초과",
     "method": "graph-rag",
-    "elapsed": 2595,
+    "elapsed": 4609,
     "detectedCount": 3,
     "expectedCount": 1,
     "detected": [
@@ -1215,7 +1215,7 @@
     "id": 34,
     "name": "투여기간주의 - 졸피뎀 초과",
     "method": "graph-rag",
-    "elapsed": 2641,
+    "elapsed": 2645,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -1246,7 +1246,7 @@
     "id": 35,
     "name": "투여기간주의 - 트리아졸람 초과",
     "method": "graph-rag",
-    "elapsed": 1508,
+    "elapsed": 2387,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -1277,7 +1277,7 @@
     "id": 36,
     "name": "투여기간주의 - 리네졸리드 초과",
     "method": "graph-rag",
-    "elapsed": 3256,
+    "elapsed": 2640,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -1308,7 +1308,7 @@
     "id": 37,
     "name": "투여기간주의 - 클로르페니라민 초과",
     "method": "graph-rag",
-    "elapsed": 2621,
+    "elapsed": 2190,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -1339,7 +1339,7 @@
     "id": 38,
     "name": "투여기간주의 - 옥시메타졸린 초과",
     "method": "graph-rag",
-    "elapsed": 8998,
+    "elapsed": 5649,
     "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
@@ -1364,7 +1364,7 @@
     "id": 39,
     "name": "안전한 조합 - 비타민C + 오메가3",
     "method": "graph-rag",
-    "elapsed": 16,
+    "elapsed": 18,
     "detectedCount": 0,
     "expectedCount": 0,
     "detected": [],
@@ -1375,7 +1375,7 @@
     "id": 40,
     "name": "안전한 조합 - 단일 성분 (아세트아미노펜)",
     "method": "graph-rag",
-    "elapsed": 23,
+    "elapsed": 31,
     "detectedCount": 0,
     "expectedCount": 0,
     "detected": [],
@@ -1386,7 +1386,7 @@
     "id": 41,
     "name": "복합 - 병용금기 + 노인주의",
     "method": "graph-rag",
-    "elapsed": 4408,
+    "elapsed": 9969,
     "detectedCount": 4,
     "expectedCount": 2,
     "detected": [
@@ -1435,7 +1435,7 @@
     "id": 42,
     "name": "복합 - 효능군중복 + 노인주의",
     "method": "graph-rag",
-    "elapsed": 3664,
+    "elapsed": 3481,
     "detectedCount": 5,
     "expectedCount": 3,
     "detected": [
@@ -1498,7 +1498,7 @@
     "id": 43,
     "name": "복합 - 병용금기 + 효능군중복",
     "method": "graph-rag",
-    "elapsed": 3211,
+    "elapsed": 3177,
     "detectedCount": 6,
     "expectedCount": 2,
     "detected": [
@@ -1565,7 +1565,7 @@
     "id": 44,
     "name": "복합 - 임부금기 + 병용금기",
     "method": "graph-rag",
-    "elapsed": 5307,
+    "elapsed": 4345,
     "detectedCount": 6,
     "expectedCount": 2,
     "detected": [
@@ -1630,7 +1630,7 @@
     "id": 45,
     "name": "복합 - 다약제 (5개)",
     "method": "graph-rag",
-    "elapsed": 6959,
+    "elapsed": 6419,
     "detectedCount": 11,
     "expectedCount": 3,
     "detected": [
@@ -1732,7 +1732,7 @@
     "id": 46,
     "name": "투여기간주의 - 기간 안 넘은 경우 (정상)",
     "method": "graph-rag",
-    "elapsed": 2884,
+    "elapsed": 2861,
     "detectedCount": 2,
     "expectedCount": 0,
     "detected": [
@@ -1756,7 +1756,7 @@
     "id": 47,
     "name": "투여기간주의 - 딱 맞는 경우 (정상)",
     "method": "graph-rag",
-    "elapsed": 1106,
+    "elapsed": 1517,
     "detectedCount": 1,
     "expectedCount": 0,
     "detected": [
@@ -1774,7 +1774,7 @@
     "id": 48,
     "name": "노인주의 - 피나제팜",
     "method": "graph-rag",
-    "elapsed": 2106,
+    "elapsed": 2046,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -1805,7 +1805,7 @@
     "id": 49,
     "name": "효능군중복 - 독사조신 + 프라조신 (Alpha Blockers)",
     "method": "graph-rag",
-    "elapsed": 1700,
+    "elapsed": 1782,
     "detectedCount": 2,
     "expectedCount": 1,
     "detected": [
@@ -1838,7 +1838,7 @@
     "id": 50,
     "name": "복합 - 노인주의 + 임부금기 + 투여기간주의",
     "method": "graph-rag",
-    "elapsed": 7423,
+    "elapsed": 3690,
     "detectedCount": 4,
     "expectedCount": 3,
     "detected": [

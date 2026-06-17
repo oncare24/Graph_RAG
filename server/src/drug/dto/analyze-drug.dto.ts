@@ -1,4 +1,4 @@
-import { IsArray, IsString, IsNumber, IsOptional, ValidateNested } from 'class-validator';
+import { IsArray, IsString, IsNumber, IsOptional, IsBoolean, ValidateNested } from 'class-validator';
 import { Type } from 'class-transformer';
 
 export class DrugInputDto {
@@ -11,14 +11,17 @@ export class DrugInputDto {
 
   @IsOptional()
   @IsNumber()
+  @Type(() => Number)
   dose?: number;
 
   @IsOptional()
   @IsNumber()
+  @Type(() => Number)
   dailyDoses?: number;
 
   @IsOptional()
   @IsNumber()
+  @Type(() => Number)
   totalDays?: number;
 }
 
@@ -29,6 +32,12 @@ export class AnalyzeDrugDto {
   drugs: DrugInputDto[];
 
   @IsOptional()
-  @IsString()
-  userId?: string;
+  @IsNumber()
+  @Type(() => Number)
+  age?: number;
+
+  @IsOptional()
+  @IsBoolean()
+  @Type(() => Boolean)
+  isPregnant?: boolean;
 }

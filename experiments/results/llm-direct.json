@@ -3,35 +3,18 @@
     "id": 1,
     "name": "병용금기 - 이트라코나졸 + 심바스타틴",
     "method": "llm-direct",
-    "elapsed": 6602,
-    "detectedCount": 3,
+    "elapsed": 5120,
+    "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
       {
         "type": "CONTRAINDICATED",
-        "severity": "CRITICAL",
-        "involvedIngredients": [
-          "이트라코나졸",
-          "심바스타틴"
-        ],
-        "reason": "이트라코나졸은 심바스타틴의 혈중 농도를 증가시켜 근육 손상(횡문근 융해증) 등의 부작용 위험을 증가시킴."
-      },
-      {
-        "type": "ELDERLY",
-        "severity": "MEDIUM",
-        "involvedIngredients": [
-          "이트라코나졸",
-          "심바스타틴"
-        ],
-        "reason": "노인에서 심바스타틴과 이트라코나졸의 병용 투여 시 부작용 발생 가능성이 높아짐."
-      },
-      {
-        "type": "PREGNANCY",
         "severity": "HIGH",
         "involvedIngredients": [
-          "이트라코나졸"
+          "이트라코나졸",
+          "심바스타틴"
         ],
-        "reason": "이트라코나졸은 임신 중 사용이 금기이며 태아에 해를 끼칠 수 있음."
+        "reason": "이트라코나졸은 심바스타틴의 혈중 농도를 증가시켜 심한 근육 관련 부작용의 위험을 증가시킬 수 있습니다."
       }
     ],
     "expected": [
@@ -49,7 +32,7 @@
     "id": 2,
     "name": "병용금기 - 메트포르민 + 이오딕사놀",
     "method": "llm-direct",
-    "elapsed": 618,
+    "elapsed": 729,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -68,20 +51,10 @@
     "id": 3,
     "name": "병용금기 - 메트포르민 + 이오트로란",
     "method": "llm-direct",
-    "elapsed": 2480,
-    "detectedCount": 1,
+    "elapsed": 523,
+    "detectedCount": 0,
     "expectedCount": 1,
-    "detected": [
-      {
-        "type": "CONTRAINDICATED",
-        "severity": "HIGH",
-        "involvedIngredients": [
-          "메트포르민",
-          "이오트로란"
-        ],
-        "reason": "메트포르민은 요독증 환자에서 사용할 수 없으며, 이오트로란은 신장 기능 저하 환자에서 주의가 필요하기 때문에 두 약물의 병용은 금기."
-      }
-    ],
+    "detected": [],
     "expected": [
       {
         "type": "CONTRAINDICATED",
@@ -91,14 +64,14 @@
         ]
       }
     ],
-    "recall": 1
+    "recall": 0
   },
   {
     "id": 4,
     "name": "병용금기 - 메토트렉세이트 + 티아프로펜산",
     "method": "llm-direct",
-    "elapsed": 6521,
-    "detectedCount": 4,
+    "elapsed": 2058,
+    "detectedCount": 1,
     "expectedCount": 1,
     "detected": [
       {
@@ -108,32 +81,7 @@
           "메토트렉세이트",
           "티아프로펜산"
         ],
-        "reason": "메토트렉세이트는 비스테로이드성 항염증제와 병용 시 위험성이 커지며, 특히 심각한 위장관 출혈 및 신장 손상 등을 유발할 수 있음."
-      },
-      {
-        "type": "ELDERLY",
-        "severity": "MEDIUM",
-        "involvedIngredients": [
-          "메토트렉세이트"
-        ],
-        "reason": "노인 환자에서 메토트렉세이트 사용 시 독성 위험이 증가할 수 있으므로, 용량 조절 및 모니터링이 필요함."
-      },
-      {
-        "type": "PREGNANCY",
-        "severity": "CRITICAL",
-        "involvedIngredients": [
-          "메토트렉세이트"
-        ],
-        "reason": "메토트렉세이트는 임신 중 사용이 금기이며, 태아에 심각한 영향을 미칠 수 있음."
-      },
-      {
-        "type": "DUPLICATE",
-        "severity": "LOW",
-        "involvedIngredients": [
-          "메토트렉세이트",
-          "티아프로펜산"
-        ],
-        "reason": "두 성분 모두 항염증 효과가 있어 효능군이 중복됨."
+        "reason": "티아프로펜산은 메토트렉세이트의 배설을 감소시켜 독성을 증가시킬 수 있습니다."
       }
     ],
     "expected": [
@@ -151,7 +99,7 @@
     "id": 5,
     "name": "병용금기 - 포르모테롤 + 노르에피네프린",
     "method": "llm-direct",
-    "elapsed": 500,
+    "elapsed": 515,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -170,38 +118,10 @@
     "id": 6,
     "name": "병용금기 - 포르모테롤 + 에피네프린",
     "method": "llm-direct",
-    "elapsed": 5603,
-    "detectedCount": 3,
+    "elapsed": 550,
+    "detectedCount": 0,
     "expectedCount": 1,
-    "detected": [
-      {
-        "type": "CONTRAINDICATED",
-        "severity": "HIGH",
-        "involvedIngredients": [
-          "포르모테롤",
-          "에피네프린"
-        ],
-        "reason": "포르모테롤과 에피네프린은 모두 β-아드레날린성 약물로, 동시에 사용 시 심혈관계 부작용 위험이 증가할 수 있음."
-      },
-      {
-        "type": "ELDERLY",
-        "severity": "MEDIUM",
-        "involvedIngredients": [
-          "포르모테롤",
-          "에피네프린"
-        ],
-        "reason": "노인 환자는 심혈관계 질환의 위험이 높아 두 약물의 병용이 부작용을 유발할 수 있음."
-      },
-      {
-        "type": "PREGNANCY",
-        "severity": "HIGH",
-        "involvedIngredients": [
-          "포르모테롤",
-          "에피네프린"
-        ],
-        "reason": "임신 중 에피네프린 사용은 태아에 위험할 수 있으며, 포르모테롤과의 병용 사용이 태아에 추가적인 위험을 초래할 수 있음."
-      }
-    ],
+    "detected": [],
     "expected": [
       {
         "type": "CONTRAINDICATED",
@@ -211,13 +131,13 @@
         ]
       }
     ],
-    "recall": 1
+    "recall": 0
   },
   {
     "id": 7,
     "name": "병용금기 - 덱사메타손 + 스파플록사신",
     "method": "llm-direct",
-    "elapsed": 2203,
+    "elapsed": 959,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -236,7 +156,7 @@
     "id": 8,
     "name": "병용금기 - 히드로코르티손 + 스파플록사신",
     "method": "llm-direct",
-    "elapsed": 571,
+    "elapsed": 955,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -255,10 +175,20 @@
     "id": 9,
     "name": "병용금기 - 프레드니솔론 + 스파플록사신",
     "method": "llm-direct",
-    "elapsed": 489,
-    "detectedCount": 0,
+    "elapsed": 1899,
+    "detectedCount": 1,
     "expectedCount": 1,
-    "detected": [],
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "프레드니솔론",
+          "스파플록사신"
+        ],
+        "reason": "스파플록사신은 스테로이드와 병용 시 감염 위험 증가 및 부작용 가능성이 높아질 수 있음."
+      }
+    ],
     "expected": [
       {
         "type": "CONTRAINDICATED",
@@ -268,16 +198,43 @@
         ]
       }
     ],
-    "recall": 0
+    "recall": 1
   },
   {
     "id": 10,
     "name": "병용금기 - 헥소프레날린 + 노르에피네프린",
     "method": "llm-direct",
-    "elapsed": 454,
-    "detectedCount": 0,
+    "elapsed": 6693,
+    "detectedCount": 3,
     "expectedCount": 1,
-    "detected": [],
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "severity": "CRITICAL",
+        "involvedIngredients": [
+          "헥소프레날린",
+          "노르에피네프린"
+        ],
+        "reason": "두 성분 모두 강력한 교감신경 자극제이며, 병용 시 부작용 및 심혈관계 위험이 증가할 수 있음."
+      },
+      {
+        "type": "ELDERLY",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "헥소프레날린",
+          "노르에피네프린"
+        ],
+        "reason": "노인 환자에서 심혈관계 부작용의 위험이 증가함."
+      },
+      {
+        "type": "PREGNANCY",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "헥소프레날린"
+        ],
+        "reason": "임부에서의 사용이 안전하지 않으며, 태아에 대한 위험 가능성이 있음."
+      }
+    ],
     "expected": [
       {
         "type": "CONTRAINDICATED",
@@ -287,13 +244,13 @@
         ]
       }
     ],
-    "recall": 0
+    "recall": 1
   },
   {
     "id": 11,
     "name": "노인주의 - 플루라제팜",
     "method": "llm-direct",
-    "elapsed": 580,
+    "elapsed": 1050,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -311,17 +268,17 @@
     "id": 12,
     "name": "노인주의 - 디아제팜",
     "method": "llm-direct",
-    "elapsed": 5080,
-    "detectedCount": 4,
+    "elapsed": 8030,
+    "detectedCount": 3,
     "expectedCount": 1,
     "detected": [
       {
         "type": "CONTRAINDICATED",
-        "severity": "CRITICAL",
+        "severity": "HIGH",
         "involvedIngredients": [
           "디아제팜"
         ],
-        "reason": "심각한 호흡억제 위험이 있는 경우, 중추신경계 억제제와 병용 시"
+        "reason": "디아제팜은 알코올 및 다른 신경계 억제제와 병용 시 중추신경계 억제를 초래할 수 있어 병용금기가 필요합니다."
       },
       {
         "type": "ELDERLY",
@@ -329,7 +286,7 @@
         "involvedIngredients": [
           "디아제팜"
         ],
-        "reason": "노인에서 짧은 작용시간과 약물 대사 변화로 인한 부작용 위험 증가"
+        "reason": "노인에서 디아제팜 사용 시 부작용 및 인지 기능 저하 위험이 증가합니다."
       },
       {
         "type": "PREGNANCY",
@@ -337,15 +294,7 @@
         "involvedIngredients": [
           "디아제팜"
         ],
-        "reason": "임신 중 사용 시 태아에게 출생 결함 및 의존성 위험"
-      },
-      {
-        "type": "DUPLICATE",
-        "severity": "MEDIUM",
-        "involvedIngredients": [
-          "디아제팜"
-        ],
-        "reason": "다른 벤조디아제핀 계열 약물과 병용 시"
+        "reason": "디아제팜은 태아에게 해를 끼칠 수 있어 임신 중 사용이 금기입니다."
       }
     ],
     "expected": [
@@ -362,10 +311,40 @@
     "id": 13,
     "name": "노인주의 - 클로르디아제폭시드",
     "method": "llm-direct",
-    "elapsed": 649,
-    "detectedCount": 0,
+    "elapsed": 10845,
+    "detectedCount": 4,
     "expectedCount": 1,
-    "detected": [],
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "알코올",
+          "진정제"
+        ],
+        "reason": "클로르디아제폭시드는 알코올 및 기타 진정제와 함께 복용 시 중추신경계 억제가 증가하여 호흡억제 및 의식 저하를 일으킬 수 있다."
+      },
+      {
+        "type": "ELDERLY",
+        "severity": "MEDIUM",
+        "involvedIngredients": [],
+        "reason": "노인에서는 약물 대사 및 배설 기능이 저하되어 부작용의 위험이 증가할 수 있다."
+      },
+      {
+        "type": "PREGNANCY",
+        "severity": "HIGH",
+        "involvedIngredients": [],
+        "reason": "임신 중 사용 시 태아에 대한 위험이 있으므로 일반적으로 권장되지 않는다."
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "LOW",
+        "involvedIngredients": [
+          "벤조디아제핀 계열 약물"
+        ],
+        "reason": "클로르디아제폭시드는 벤조디아제핀 계열의 약물로, 같은 그룹의 약물과 함께 병용 시 효과가 중복될 수 있다."
+      }
+    ],
     "expected": [
       {
         "type": "ELDERLY",
@@ -374,13 +353,13 @@
         ]
       }
     ],
-    "recall": 0
+    "recall": 1
   },
   {
     "id": 14,
     "name": "노인주의 - 클로나제팜",
     "method": "llm-direct",
-    "elapsed": 1485,
+    "elapsed": 558,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -398,7 +377,7 @@
     "id": 15,
     "name": "노인주의 - 몰린돈",
     "method": "llm-direct",
-    "elapsed": 466,
+    "elapsed": 2554,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -416,7 +395,7 @@
     "id": 16,
     "name": "노인주의 - 플루니트라제팜",
     "method": "llm-direct",
-    "elapsed": 558,
+    "elapsed": 726,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -434,7 +413,7 @@
     "id": 17,
     "name": "노인주의 - 클로바잠",
     "method": "llm-direct",
-    "elapsed": 1121,
+    "elapsed": 556,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -452,33 +431,39 @@
     "id": 18,
     "name": "노인주의 - 멕사졸람",
     "method": "llm-direct",
-    "elapsed": 3359,
-    "detectedCount": 3,
+    "elapsed": 5714,
+    "detectedCount": 4,
     "expectedCount": 1,
     "detected": [
       {
         "type": "CONTRAINDICATED",
-        "severity": "HIGH",
+        "severity": "CRITICAL",
         "involvedIngredients": [
-          "멕사졸람"
+          "알코올",
+          "오피오이드"
         ],
-        "reason": "중추신경계 억제제와 병용 시 호흡 억제 및 과다진정 위험이 증가하기 때문에 병용금기."
+        "reason": "멕사졸람과 함께 사용하는 경우 중추신경계 억제 작용이 증가하여 호흡 억제 및 혼수 상태를 유발할 수 있다."
       },
       {
         "type": "ELDERLY",
-        "severity": "MEDIUM",
-        "involvedIngredients": [
-          "멕사졸람"
-        ],
-        "reason": "노인에서 부작용 발생 위험이 더 높음."
+        "severity": "HIGH",
+        "involvedIngredients": [],
+        "reason": "노인에서 민감도가 증가하고 대사 및 배출 감소로 인해 부작용의 위험이 높다."
       },
       {
         "type": "PREGNANCY",
         "severity": "HIGH",
+        "involvedIngredients": [],
+        "reason": "임신 중 사용 시 태아에 대한 위험이 증가하며, 신생아의 종속성이 발생할 수 있다."
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "MEDIUM",
         "involvedIngredients": [
-          "멕사졸람"
+          "다이아 제팜",
+          "클로나제팜"
         ],
-        "reason": "임신 중 사용 시 태아에 대한 위험이 있으므로 임부금기."
+        "reason": "멕사졸람은 벤조디아제핀 계열 약물로 유사한 작용을 가지며 병용 시 중추신경계 억제 효과가 중복된다."
       }
     ],
     "expected": [
@@ -495,10 +480,38 @@
     "id": 19,
     "name": "효능군중복 - 아스피린 + 이부프로펜 (소염제)",
     "method": "llm-direct",
-    "elapsed": 390,
-    "detectedCount": 0,
+    "elapsed": 4966,
+    "detectedCount": 3,
     "expectedCount": 1,
-    "detected": [],
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "아스피린",
+          "이부프로펜"
+        ],
+        "reason": "두 약물 모두 비스테로이드 항염증제(NSAIDs)로, 병용 시 위장관 출혈 등의 위험이 증가함."
+      },
+      {
+        "type": "ELDERLY",
+        "severity": "MEDIUM",
+        "involvedIngredients": [
+          "아스피린",
+          "이부프로펜"
+        ],
+        "reason": "노인의 경우 약물 대사와 배설 기능이 저하되어 부작용 발생 위험이 높음."
+      },
+      {
+        "type": "PREGNANCY",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "아스피린",
+          "이부프로펜"
+        ],
+        "reason": "임신 중 약물 복용은 태아에 대한 위험이 있으므로 주의해야 함."
+      }
+    ],
     "expected": [
       {
         "type": "DUPLICATE",
@@ -514,38 +527,10 @@
     "id": 20,
     "name": "효능군중복 - 아세클로페낙 + 나프록센 (소염제)",
     "method": "llm-direct",
-    "elapsed": 4213,
-    "detectedCount": 3,
+    "elapsed": 697,
+    "detectedCount": 0,
     "expectedCount": 1,
-    "detected": [
-      {
-        "type": "CONTRAINDICATED",
-        "severity": "HIGH",
-        "involvedIngredients": [
-          "아세클로페낙",
-          "나프록센"
-        ],
-        "reason": "두 약물 모두 비스테로이드성 항염증제(NSAID)로서, 위장관 출혈, 신장 손상 등의 위험이 증가합니다."
-      },
-      {
-        "type": "ELDERLY",
-        "severity": "MEDIUM",
-        "involvedIngredients": [
-          "아세클로페낙",
-          "나프록센"
-        ],
-        "reason": "노인 환자는 NSAID의 부작용에 취약하여, 주의가 필요합니다."
-      },
-      {
-        "type": "PREGNANCY",
-        "severity": "HIGH",
-        "involvedIngredients": [
-          "아세클로페낙",
-          "나프록센"
-        ],
-        "reason": "임신 중에는 NSAID 사용이 태아에게 부정적인 영향을 미칠 수 있으며, 특히 3분기 동안 금기입니다."
-      }
-    ],
+    "detected": [],
     "expected": [
       {
         "type": "DUPLICATE",
@@ -561,10 +546,38 @@
     "id": 21,
     "name": "효능군중복 - 세레콕시브 + 디클로페낙 (소염제)",
     "method": "llm-direct",
-    "elapsed": 507,
-    "detectedCount": 0,
+    "elapsed": 4245,
+    "detectedCount": 3,
     "expectedCount": 1,
-    "detected": [],
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "세레콕시브",
+          "디클로페낙"
+        ],
+        "reason": "두 약물 모두 비스테로이드 항염증제(NSAIDs)로서 병용 시 위장관 출혈 및 신장 손상의 위험이 증가함."
+      },
+      {
+        "type": "ELDERLY",
+        "severity": "MEDIUM",
+        "involvedIngredients": [
+          "세레콕시브",
+          "디클로페낙"
+        ],
+        "reason": "노인 환자는 약물의 대사 및 배설이 저하되어 부작용 및 독성 위험이 증가할 수 있음."
+      },
+      {
+        "type": "PREGNANCY",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "세레콕시브",
+          "디클로페낙"
+        ],
+        "reason": "임신 중 비스테로이드 항염증제의 사용은 태아에게 부정적인 영향을 미칠 수 있음."
+      }
+    ],
     "expected": [
       {
         "type": "DUPLICATE",
@@ -580,7 +593,7 @@
     "id": 22,
     "name": "효능군중복 - 포르모테롤 + 살부타몰 (베타수용체)",
     "method": "llm-direct",
-    "elapsed": 636,
+    "elapsed": 711,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -599,7 +612,7 @@
     "id": 23,
     "name": "효능군중복 - 팔리페리돈 + 리스페리돈 (항정신병)",
     "method": "llm-direct",
-    "elapsed": 575,
+    "elapsed": 505,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -618,8 +631,8 @@
     "id": 24,
     "name": "효능군중복 - 쿠에티아핀 + 올란자핀 (항정신병)",
     "method": "llm-direct",
-    "elapsed": 8925,
-    "detectedCount": 4,
+    "elapsed": 6392,
+    "detectedCount": 3,
     "expectedCount": 1,
     "detected": [
       {
@@ -629,7 +642,7 @@
           "쿠에티아핀",
           "올란자핀"
         ],
-        "reason": "두 성분 모두 항정신병 약물로, 병용 시 중추신경계 억제 효과가 증가할 수 있어 심각한 부작용을 유발할 수 있습니다."
+        "reason": "두 약물 모두 신경정신과적 복용에 대한 심각한 상호작용 및 사이토크롬 P450 효소에 영향을 미쳐 중추신경계 억제 효과 증가."
       },
       {
         "type": "ELDERLY",
@@ -638,7 +651,7 @@
           "쿠에티아핀",
           "올란자핀"
         ],
-        "reason": "노인 환자에서 진정 효과 및 부작용의 위험이 증가할 수 있습니다."
+        "reason": "노인에서의 복용 시 신경정신적 부작용 및 대사 쪽 문제 발생 가능성 증가."
       },
       {
         "type": "PREGNANCY",
@@ -647,16 +660,7 @@
           "쿠에티아핀",
           "올란자핀"
         ],
-        "reason": "임신 중 사용 시 태아에 대한 위험이 증가할 수 있으며, 신경계 이상을 초래할 수 있습니다."
-      },
-      {
-        "type": "DUPLICATE",
-        "severity": "MEDIUM",
-        "involvedIngredients": [
-          "쿠에티아핀",
-          "올란자핀"
-        ],
-        "reason": "두 약물 모두 비슷한 효능군에 속하여 중복 처방의 필요성이 있으며, 추가적인 효과보다는 부작용의 위험이 증가합니다."
+        "reason": "임산부에서의 안전성 데이터 부족으로 인해 태아에 대한 잠재적 위험 존재."
       }
     ],
     "expected": [
@@ -668,13 +672,13 @@
         ]
       }
     ],
-    "recall": 1
+    "recall": 0
   },
   {
     "id": 25,
     "name": "효능군중복 - 글리메피리드 + 글리클라지드 (설포닐우레아)",
     "method": "llm-direct",
-    "elapsed": 514,
+    "elapsed": 680,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -693,7 +697,7 @@
     "id": 26,
     "name": "효능군중복 - 베라파밀 + 딜티아젬 (CCB)",
     "method": "llm-direct",
-    "elapsed": 7227,
+    "elapsed": 5344,
     "detectedCount": 4,
     "expectedCount": 1,
     "detected": [
@@ -704,7 +708,7 @@
           "베라파밀",
           "딜티아젬"
         ],
-        "reason": "두 약물 모두 칼슘 채널 차단제이며, 병용 시 심박수 감소 및 저혈압의 위험이 증가할 수 있습니다."
+        "reason": "베라파밀과 딜티아젬은 모두 칼슘 채널 차단제이며 병용 시 심각한 저혈압이나 서맥을 유발할 수 있습니다."
       },
       {
         "type": "ELDERLY",
@@ -713,7 +717,7 @@
           "베라파밀",
           "딜티아젬"
         ],
-        "reason": "노인은 심혈관계 질환이 많고 약물 반응성이 다를 수 있어 주의가 필요합니다."
+        "reason": "노인 환자는 심혈관계 부작용에 취약하므로 주의할 필요가 있습니다."
       },
       {
         "type": "PREGNANCY",
@@ -722,16 +726,16 @@
           "베라파밀",
           "딜티아젬"
         ],
-        "reason": "임신 중 안전성에 대한 충분한 연구가 없으며, 태아에 악영향을 미칠 수 있습니다."
+        "reason": "임신 중 칼슘 채널 차단제 사용은 태아에 위험할 수 있으며, 특히 초기 임신 동안 주의가 필요합니다."
       },
       {
         "type": "DUPLICATE",
-        "severity": "HIGH",
+        "severity": "MEDIUM",
         "involvedIngredients": [
           "베라파밀",
           "딜티아젬"
         ],
-        "reason": "두 약물 모두 칼슘 채널 차단제로서 같은 효능이 있으며, 중복 사용은 효능의 증가 없이 부작용만 증가시킬 위험이 있습니다."
+        "reason": "두 성분 모두 비슷한 메커니즘으로 작용하며, 동시에 사용 시 효능이 중복됩니다."
       }
     ],
     "expected": [
@@ -749,36 +753,10 @@
     "id": 27,
     "name": "임부금기 1등급 - 로수바스타틴",
     "method": "llm-direct",
-    "elapsed": 4653,
-    "detectedCount": 3,
+    "elapsed": 631,
+    "detectedCount": 0,
     "expectedCount": 1,
-    "detected": [
-      {
-        "type": "CONTRAINDICATED",
-        "severity": "HIGH",
-        "involvedIngredients": [
-          "로수바스타틴",
-          "씨뮤바스타틴"
-        ],
-        "reason": "다른 스타틴 계열 약물과 병용 시 근육 손상의 위험이 증가하기 때문."
-      },
-      {
-        "type": "ELDERLY",
-        "severity": "MEDIUM",
-        "involvedIngredients": [
-          "로수바스타틴"
-        ],
-        "reason": "노인은 약물 대사 및 배설이 저하될 수 있어 용량 조절이 필요함."
-      },
-      {
-        "type": "PREGNANCY",
-        "severity": "CRITICAL",
-        "involvedIngredients": [
-          "로수바스타틴"
-        ],
-        "reason": "임신 중 사용 시 태아에게 위험할 수 있음."
-      }
-    ],
+    "detected": [],
     "expected": [
       {
         "type": "PREGNANCY",
@@ -787,13 +765,13 @@
         ]
       }
     ],
-    "recall": 1
+    "recall": 0
   },
   {
     "id": 28,
     "name": "임부금기 1등급 - 프라바스타틴",
     "method": "llm-direct",
-    "elapsed": 413,
+    "elapsed": 687,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -811,41 +789,10 @@
     "id": 29,
     "name": "임부금기 1등급 - 플루바스타틴",
     "method": "llm-direct",
-    "elapsed": 4154,
-    "detectedCount": 4,
+    "elapsed": 743,
+    "detectedCount": 0,
     "expectedCount": 1,
-    "detected": [
-      {
-        "type": "CONTRAINDICATED",
-        "severity": "HIGH",
-        "involvedIngredients": [
-          "제로스타틴",
-          "리바스타틴"
-        ],
-        "reason": "플루바스타틴과 구조적으로 유사한 약물과 병용 시 근육 독성 위험이 증가할 수 있음."
-      },
-      {
-        "type": "ELDERLY",
-        "severity": "MEDIUM",
-        "involvedIngredients": [],
-        "reason": "노인의 경우 약물 대사 및 배설이 저하될 수 있어 주의가 필요함."
-      },
-      {
-        "type": "PREGNANCY",
-        "severity": "CRITICAL",
-        "involvedIngredients": [],
-        "reason": "임신 중 사용 시 태아에 대한 위험 가능성이 있어 금기."
-      },
-      {
-        "type": "DUPLICATE",
-        "severity": "LOW",
-        "involvedIngredients": [
-          "아토르바스타틴",
-          "심바스타틴"
-        ],
-        "reason": "플루바스타틴과 유사한 효능을 가진 약물과 중복."
-      }
-    ],
+    "detected": [],
     "expected": [
       {
         "type": "PREGNANCY",
@@ -854,13 +801,13 @@
         ]
       }
     ],
-    "recall": 1
+    "recall": 0
   },
   {
     "id": 30,
     "name": "임부금기 1등급 - 피타바스타틴",
     "method": "llm-direct",
-    "elapsed": 542,
+    "elapsed": 545,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -878,8 +825,8 @@
     "id": 31,
     "name": "임부금기 1등급 - 플루오로우라실",
     "method": "llm-direct",
-    "elapsed": 4983,
-    "detectedCount": 3,
+    "elapsed": 10406,
+    "detectedCount": 4,
     "expectedCount": 1,
     "detected": [
       {
@@ -888,7 +835,7 @@
         "involvedIngredients": [
           "플루오로우라실"
         ],
-        "reason": "중증 백혈구 감소증 및 간 기능 부전 환자에게 금기"
+        "reason": "플루오로우라실은 특정한 조건에서 사용이 금기되어 있으며, 특히 심한 골수 억제 등이 있는 환자는 사용이 금지됨."
       },
       {
         "type": "ELDERLY",
@@ -896,7 +843,7 @@
         "involvedIngredients": [
           "플루오로우라실"
         ],
-        "reason": "노인 환자에서 안전성 및 내약성 문제가 있음"
+        "reason": "노인 환자는 약물의 대사 및 배설 능력이 저하되어 부작용의 위험이 증가함."
       },
       {
         "type": "PREGNANCY",
@@ -904,7 +851,16 @@
         "involvedIngredients": [
           "플루오로우라실"
         ],
-        "reason": "임신 중 사용 시 태아에 대한 위험 우려"
+        "reason": "임신 중 사용할 경우 태아에게 심각한 손상을 초래할 수 있음."
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "MEDIUM",
+        "involvedIngredients": [
+          "플루오로우라실",
+          "다른 항암제"
+        ],
+        "reason": "플루오로우라실과 다른 항암제를 병용할 경우 독성 증가의 위험이 있음."
       }
     ],
     "expected": [
@@ -921,10 +877,40 @@
     "id": 32,
     "name": "임부금기 1등급 - 에티닐에스트라디올",
     "method": "llm-direct",
-    "elapsed": 615,
-    "detectedCount": 0,
+    "elapsed": 9497,
+    "detectedCount": 4,
     "expectedCount": 1,
-    "detected": [],
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "severity": "CRITICAL",
+        "involvedIngredients": [
+          "담배",
+          "리팜피신"
+        ],
+        "reason": "에티닐에스트라디올은 혈전형성 위험을 증가시킬 수 있으며, 담배와 함께 사용 시 심혈관 질환 위험이 크게 증가한다."
+      },
+      {
+        "type": "PREGNANCY",
+        "severity": "HIGH",
+        "involvedIngredients": [],
+        "reason": "에티닐에스트라디올은 임신 중 사용이 금기이며, 태아에게 해로울 수 있다."
+      },
+      {
+        "type": "ELDERLY",
+        "severity": "MEDIUM",
+        "involvedIngredients": [],
+        "reason": "노인에서 사용 시 혈전증과 같은 심각한 부작용의 위험이 증가할 수 있어 주의가 필요하다."
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "LOW",
+        "involvedIngredients": [
+          "프로게스테론"
+        ],
+        "reason": "에티닐에스트라디올과 프로게스테론은 모두 호르몬 기반 약물로, 함께 사용 시 중복될 수 있다."
+      }
+    ],
     "expected": [
       {
         "type": "PREGNANCY",
@@ -933,13 +919,13 @@
         ]
       }
     ],
-    "recall": 0
+    "recall": 1
   },
   {
     "id": 33,
     "name": "투여기간주의 - 나프록센 초과",
     "method": "llm-direct",
-    "elapsed": 509,
+    "elapsed": 3066,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -957,27 +943,10 @@
     "id": 34,
     "name": "투여기간주의 - 졸피뎀 초과",
     "method": "llm-direct",
-    "elapsed": 3344,
-    "detectedCount": 2,
+    "elapsed": 603,
+    "detectedCount": 0,
     "expectedCount": 1,
-    "detected": [
-      {
-        "type": "ELDERLY",
-        "severity": "HIGH",
-        "involvedIngredients": [
-          "졸피뎀타르타르산염"
-        ],
-        "reason": "노인 환자는 졸피뎀의 진정 효과와 부작용에 더 민감할 수 있으며, 신장 및 간 기능 저하로 인해 안전 문제가 있을 수 있습니다."
-      },
-      {
-        "type": "PREGNANCY",
-        "severity": "HIGH",
-        "involvedIngredients": [
-          "졸피뎀타르타르산염"
-        ],
-        "reason": "임신 중 졸피뎀 사용은 태아에게 위험할 수 있으며, 발달 중인 태아에 대한 영향을 미칠 수 있습니다."
-      }
-    ],
+    "detected": [],
     "expected": [
       {
         "type": "DURATION",
@@ -992,10 +961,35 @@
     "id": 35,
     "name": "투여기간주의 - 트리아졸람 초과",
     "method": "llm-direct",
-    "elapsed": 499,
-    "detectedCount": 0,
+    "elapsed": 12584,
+    "detectedCount": 3,
     "expectedCount": 1,
-    "detected": [],
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "severity": "CRITICAL",
+        "involvedIngredients": [
+          "트리아졸람"
+        ],
+        "reason": "트리아졸람은 알코올, 바르비투레이트 등과 병용할 경우 호흡 억제 및 중추신경계 억제를 초래할 수 있으며, 중환자실에서의 사용을 피해야 합니다."
+      },
+      {
+        "type": "ELDERLY",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "트리아졸람"
+        ],
+        "reason": "노인에서는 약물의 대사 및 배설 기능이 감소되어 부작용 발생 위험이 증가합니다."
+      },
+      {
+        "type": "PREGNANCY",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "트리아졸람"
+        ],
+        "reason": "임신 중 트리아졸람 사용은 태아에 해를 끼칠 수 있으며, 특히 제 1기에는 사용을 피해야 합니다."
+      }
+    ],
     "expected": [
       {
         "type": "DURATION",
@@ -1010,7 +1004,7 @@
     "id": 36,
     "name": "투여기간주의 - 리네졸리드 초과",
     "method": "llm-direct",
-    "elapsed": 574,
+    "elapsed": 2919,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -1028,7 +1022,7 @@
     "id": 37,
     "name": "투여기간주의 - 클로르페니라민 초과",
     "method": "llm-direct",
-    "elapsed": 597,
+    "elapsed": 640,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -1046,7 +1040,7 @@
     "id": 38,
     "name": "투여기간주의 - 옥시메타졸린 초과",
     "method": "llm-direct",
-    "elapsed": 4227,
+    "elapsed": 8283,
     "detectedCount": 3,
     "expectedCount": 1,
     "detected": [
@@ -1056,15 +1050,15 @@
         "involvedIngredients": [
           "옥시메타졸린"
         ],
-        "reason": "고혈압, 심혈관 질환 환자에게는 사용 금지"
+        "reason": "옥시메타졸린은 항고혈압제 및 MAO 억제제와 병용 시 교감신경 자극 효과로 인해 심혈관계 부작용 위험이 증가할 수 있습니다."
       },
       {
         "type": "ELDERLY",
-        "severity": "MEDIUM",
+        "severity": "HIGH",
         "involvedIngredients": [
           "옥시메타졸린"
         ],
-        "reason": "노인 환자에게는 부작용 발생 위험 증가"
+        "reason": "노인 환자는 혈압 조절 및 심혈관계 질환의 위험이 높아 적절한 모니터링이 필요합니다."
       },
       {
         "type": "PREGNANCY",
@@ -1072,7 +1066,7 @@
         "involvedIngredients": [
           "옥시메타졸린"
         ],
-        "reason": "임신 중 사용 시 태아에 미치는 영향 불확실"
+        "reason": "임신 중 안전성이 입증되지 않아 사용을 피해야 합니다."
       }
     ],
     "expected": [
@@ -1089,7 +1083,7 @@
     "id": 39,
     "name": "안전한 조합 - 비타민C + 오메가3",
     "method": "llm-direct",
-    "elapsed": 457,
+    "elapsed": 510,
     "detectedCount": 0,
     "expectedCount": 0,
     "detected": [],
@@ -1100,7 +1094,7 @@
     "id": 40,
     "name": "안전한 조합 - 단일 성분 (아세트아미노펜)",
     "method": "llm-direct",
-    "elapsed": 548,
+    "elapsed": 472,
     "detectedCount": 0,
     "expectedCount": 0,
     "detected": [],
@@ -1111,7 +1105,7 @@
     "id": 41,
     "name": "복합 - 병용금기 + 노인주의",
     "method": "llm-direct",
-    "elapsed": 7007,
+    "elapsed": 8582,
     "detectedCount": 4,
     "expectedCount": 2,
     "detected": [
@@ -1122,16 +1116,16 @@
           "디아제팜",
           "플루라제팜"
         ],
-        "reason": "두 성분은 모두 벤조디아제핀 계열 약물로, 병용 시 진정 효과가 증가하여 호흡 억제 및 중추신경계 억제 위험이 증가할 수 있음."
+        "reason": "두 약물 모두 벤조디아제핀계 약물로 중추신경계 억제 효과가 겹치며, 병용 시 지나친 진정작용 및 호흡억제가 발생할 수 있음."
       },
       {
         "type": "ELDERLY",
-        "severity": "MEDIUM",
+        "severity": "HIGH",
         "involvedIngredients": [
           "디아제팜",
           "플루라제팜"
         ],
-        "reason": "노인 환자에서 약물의 대사 및 배설이 감소하여 부작용 위험이 증가할 수 있음."
+        "reason": "노인에서 약물 대사 및 배설 능력이 감소하여 과다 진정 및 다른 부작용의 위험이 높아짐."
       },
       {
         "type": "PREGNANCY",
@@ -1140,16 +1134,16 @@
           "디아제팜",
           "플루라제팜"
         ],
-        "reason": "두 성분 모두 임신 중 사용 시 태아에 대한 위험이 있으므로 임부에게 금기임."
+        "reason": "임신 중 사용 시 태아에게 해로운 영향을 미칠 가능성이 있으므로 임부에게 금기."
       },
       {
         "type": "DUPLICATE",
-        "severity": "LOW",
+        "severity": "MEDIUM",
         "involvedIngredients": [
           "디아제팜",
           "플루라제팜"
         ],
-        "reason": "두 약물은 유사한 효능을 가지므로, 중복 사용 시 효능이 겹치는 문제가 발생할 수 있음."
+        "reason": "두 약물은 유사한 효능을 가지며 병용 시 동일한 효과를 반복하는 것으로 간주됨."
       }
     ],
     "expected": [
@@ -1172,18 +1166,18 @@
     "id": 42,
     "name": "복합 - 효능군중복 + 노인주의",
     "method": "llm-direct",
-    "elapsed": 3491,
+    "elapsed": 2467,
     "detectedCount": 1,
     "expectedCount": 3,
     "detected": [
       {
-        "type": "CONTRAINDICATED",
-        "severity": "HIGH",
+        "type": "DUPLICATE",
+        "severity": "MEDIUM",
         "involvedIngredients": [
           "아세클로페낙",
           "이부프로펜"
         ],
-        "reason": "두 약물 모두 비스테로이드 항염증제(NSAID)로, 병용 시 위장관 출혈, 신장 손상 등의 부작용 위험이 증가함."
+        "reason": "두 약물 모두 비스테로이드성 항염증제(NSAIDs)로, 유사한 효능을 가지고 있어 병용 시 효과의 중복이 발생함."
       }
     ],
     "expected": [
@@ -1207,13 +1201,13 @@
         ]
       }
     ],
-    "recall": 0
+    "recall": 0.5
   },
   {
     "id": 43,
     "name": "복합 - 병용금기 + 효능군중복",
     "method": "llm-direct",
-    "elapsed": 415,
+    "elapsed": 777,
     "detectedCount": 0,
     "expectedCount": 2,
     "detected": [],
@@ -1239,38 +1233,10 @@
     "id": 44,
     "name": "복합 - 임부금기 + 병용금기",
     "method": "llm-direct",
-    "elapsed": 5178,
-    "detectedCount": 3,
+    "elapsed": 773,
+    "detectedCount": 0,
     "expectedCount": 2,
-    "detected": [
-      {
-        "type": "CONTRAINDICATED",
-        "severity": "CRITICAL",
-        "involvedIngredients": [
-          "이트라코나졸",
-          "심바스타틴"
-        ],
-        "reason": "이트라코나졸이 심바스타틴의 대사를 억제하여 심바스타틴의 농도를 증가시키고, 이로 인해 근육 독성의 위험이 높아질 수 있음."
-      },
-      {
-        "type": "CONTRAINDICATED",
-        "severity": "CRITICAL",
-        "involvedIngredients": [
-          "이트라코나졸",
-          "로수바스타틴"
-        ],
-        "reason": "이트라코나졸이 로수바스타틴의 대사를 억제하여 로수바스타틴의 농도를 증가시키고, 이로 인해 근육 독성의 위험이 높아질 수 있음."
-      },
-      {
-        "type": "DUPLICATE",
-        "severity": "MEDIUM",
-        "involvedIngredients": [
-          "심바스타틴",
-          "로수바스타틴"
-        ],
-        "reason": "두 약물이 모두 스타틴 계열로서 콜레스테롤 감소 효과를 가지며, 병용 시 효능 중복 및 부작용 상승의 우려가 있음."
-      }
-    ],
+    "detected": [],
     "expected": [
       {
         "type": "CONTRAINDICATED",
@@ -1286,60 +1252,16 @@
         ]
       }
     ],
-    "recall": 0.5
+    "recall": 0
   },
   {
     "id": 45,
     "name": "복합 - 다약제 (5개)",
     "method": "llm-direct",
-    "elapsed": 7988,
-    "detectedCount": 5,
+    "elapsed": 610,
+    "detectedCount": 0,
     "expectedCount": 3,
-    "detected": [
-      {
-        "type": "CONTRAINDICATED",
-        "severity": "HIGH",
-        "involvedIngredients": [
-          "아스피린",
-          "이부프로펜"
-        ],
-        "reason": "두 약물 모두 비스테로이드성 항염증제(NNSAIDs)로, 함께 사용할 경우 출혈 위험이 증가할 수 있습니다."
-      },
-      {
-        "type": "ELDERLY",
-        "severity": "HIGH",
-        "involvedIngredients": [
-          "디아제팜"
-        ],
-        "reason": "노인 환자에서 진정작용이 증가하고, 부작용 위험이 높아질 수 있습니다."
-      },
-      {
-        "type": "PREGNANCY",
-        "severity": "HIGH",
-        "involvedIngredients": [
-          "아스피린"
-        ],
-        "reason": "임신 중 사용 시 태아에 대한 위험이 증가할 수 있습니다."
-      },
-      {
-        "type": "DUPLICATE",
-        "severity": "MEDIUM",
-        "involvedIngredients": [
-          "이부프로펜",
-          "아스피린"
-        ],
-        "reason": "두 약물 모두 비스테로이드성 항염증제이며, 동시에 사용 시 불필요한 효능 중복이 발생합니다."
-      },
-      {
-        "type": "DUPLICATE",
-        "severity": "LOW",
-        "involvedIngredients": [
-          "디아제팜",
-          "메트포르민"
-        ],
-        "reason": "두 약물이 서로 다른 작용 기전을 가지지만, 특정 환자에서 진정 작용이 과도해질 수 있습니다."
-      }
-    ],
+    "detected": [],
     "expected": [
       {
         "type": "CONTRAINDICATED",
@@ -1362,25 +1284,50 @@
         ]
       }
     ],
-    "recall": 1
+    "recall": 0
   },
   {
     "id": 46,
     "name": "투여기간주의 - 기간 안 넘은 경우 (정상)",
     "method": "llm-direct",
-    "elapsed": 496,
-    "detectedCount": 0,
+    "elapsed": 3305,
+    "detectedCount": 3,
     "expectedCount": 0,
-    "detected": [],
+    "detected": [
+      {
+        "type": "CONTRAINDICATED",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "나프록센"
+        ],
+        "reason": "나프록센은 특정 심혈관 질환이 있는 환자에게 금기입니다."
+      },
+      {
+        "type": "ELDERLY",
+        "severity": "MEDIUM",
+        "involvedIngredients": [
+          "나프록센"
+        ],
+        "reason": "노인 환자에서 신장 기능 저하의 위험이 증가합니다."
+      },
+      {
+        "type": "PREGNANCY",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "나프록센"
+        ],
+        "reason": "임신 중 사용 시 태아에게 해로운 영향을 미칠 수 있습니다."
+      }
+    ],
     "expected": [],
-    "recall": 1
+    "recall": 0
   },
   {
     "id": 47,
     "name": "투여기간주의 - 딱 맞는 경우 (정상)",
     "method": "llm-direct",
-    "elapsed": 4988,
-    "detectedCount": 3,
+    "elapsed": 3545,
+    "detectedCount": 4,
     "expectedCount": 0,
     "detected": [
       {
@@ -1389,23 +1336,31 @@
         "involvedIngredients": [
           "트리아졸람"
         ],
-        "reason": "중추신경억제제와의 병용금기를 위한 높은 위험도."
+        "reason": "트리아졸람은 특정한 간질환이나 호흡기 질환을 가진 환자에게 금기입니다."
       },
       {
         "type": "ELDERLY",
-        "severity": "HIGH",
-        "involvedIngredients": [
-          "트리아졸람"
-        ],
-        "reason": "노인에서의 부작용 및 약물의 반감기가 증가할 가능성."
-      },
-      {
-        "type": "PREGNANCY",
         "severity": "CRITICAL",
         "involvedIngredients": [
           "트리아졸람"
         ],
-        "reason": "임신 중 사용에 대한 강력한 금기."
+        "reason": "노인에게서 약물의 반응이 다를 수 있으며, 부작용 위험이 증가합니다."
+      },
+      {
+        "type": "PREGNANCY",
+        "severity": "HIGH",
+        "involvedIngredients": [
+          "트리아졸람"
+        ],
+        "reason": "트리아졸람은 임신 중 사용 시 태아에 대한 위험이 있을 수 있습니다."
+      },
+      {
+        "type": "DURATION",
+        "severity": "MEDIUM",
+        "involvedIngredients": [
+          "트리아졸람"
+        ],
+        "reason": "21일 이상의 장기 투여는 내성 발생 및 의존증을 초래할 수 있습니다."
       }
     ],
     "expected": [],
@@ -1415,7 +1370,7 @@
     "id": 48,
     "name": "노인주의 - 피나제팜",
     "method": "llm-direct",
-    "elapsed": 392,
+    "elapsed": 590,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -1433,7 +1388,7 @@
     "id": 49,
     "name": "효능군중복 - 독사조신 + 프라조신 (Alpha Blockers)",
     "method": "llm-direct",
-    "elapsed": 530,
+    "elapsed": 619,
     "detectedCount": 0,
     "expectedCount": 1,
     "detected": [],
@@ -1452,7 +1407,7 @@
     "id": 50,
     "name": "복합 - 노인주의 + 임부금기 + 투여기간주의",
     "method": "llm-direct",
-    "elapsed": 4353,
+    "elapsed": 16573,
     "detectedCount": 4,
     "expectedCount": 3,
     "detected": [
@@ -1463,7 +1418,7 @@
           "트리아졸람",
           "클로나제팜"
         ],
-        "reason": "두 약물 모두 벤조디아제핀 계열로 중추신경계 억제를 초래하고, 병용 시 호흡 억제 및 진정 효과가 증가할 수 있음."
+        "reason": "두 약물 모두 벤조디아제핀 계열로, 중추신경계 억제 효과가 증가할 수 있어 병용이 금기."
       },
       {
         "type": "ELDERLY",
@@ -1472,7 +1427,7 @@
           "트리아졸람",
           "클로나제팜"
         ],
-        "reason": "노인은 약물 대사가 저하되어 부작용의 위험성이 증가하므로 주의가 필요함."
+        "reason": "노인 환자에서 중추신경계 억제 효과가 더욱 두드러질 수 있으며, 낙상 및 혼동 위험 증가."
       },
       {
         "type": "PREGNANCY",
@@ -1481,7 +1436,7 @@
           "트리아졸람",
           "클로나제팜"
         ],
-        "reason": "두 약물 모두 임신 중 사용이 금기이며 태아에 해로운 영향을 미칠 수 있음."
+        "reason": "두 약물 모두 임신 중 사용이 금기이며 태아에 미치는 위험이 있음."
       },
       {
         "type": "DUPLICATE",
@@ -1490,7 +1445,7 @@
           "트리아졸람",
           "클로나제팜"
         ],
-        "reason": "두 약물은 모두 진정 및 항불안 효과를 가지고 있어 효능군이 중복됨."
+        "reason": "효능군 중복으로 인해 동일한 효과를 가진 두 약물의 병용은 바람직하지 않음."
       }
     ],
     "expected": [
